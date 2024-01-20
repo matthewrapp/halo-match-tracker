@@ -18,7 +18,7 @@ export async function revalidate({
    }
 
    if (path) {
-      const url = process.env.NEXT_PUBLIC_LUMINARY_URL;
+      const url = process.env.NEXT_PUBLIC_BASE_URL;
       if (url && path.includes(url)) {
          revalidatePath(path);
       } else {
