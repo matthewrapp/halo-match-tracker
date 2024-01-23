@@ -1,23 +1,29 @@
 "use client";
-import React, { useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import {
    Button,
    Card,
    CardBody,
    Checkbox,
    Dialog,
+   IconButton,
    Option,
    Select,
    Typography,
 } from "@material-tailwind/react";
-import { GameType, Player, Session } from "@/lib/types";
+import { GameMap, GameType, Match, Player, Session } from "@/lib/types";
 import { createSession } from "@/lib/server-actions/firebase";
 import { deepCopy } from "@/utilities/helpers";
-import SessionsTable from "@/lib/features/sessions-table/SessionsTable";
+import SessionsTable from "@/lib/features/sessions-partials/SessionsTable";
 import { useRouter } from "next/navigation";
 import PageContainer from "@/lib/common/container/PageContainer";
 import { allPlayers, gameTypes } from "@/lib/lookupData";
 import { revalidate } from "@/lib/server-actions/revalidate";
+import useSocketIO from "@/lib/hooks/useSocketIO";
+import CreateNewSession from "@/lib/features/sessions-partials/CreateNewSession";
+import FloatingBtnContainer from "@/lib/common/floating-btn-container/FloatingBtnContainer";
+import { PlusIcon } from "@heroicons/react/24/solid";
+import AnalyticCards from "@/lib/features/analytic-cards/AnalyticCards";
 
 const defaultPlayers: { [player in Player]: boolean } = {
    HafenNation: false,
@@ -35,25 +41,15 @@ interface Props {
 
 const HomeClient = ({ sessions, matchesPlayed, wins, loses }: Props) => {
    const router = useRouter();
+   const { socket, socketEmit, eventResponse } = useSocketIO();
    const [modalOpen, setModalOpen] = useState<boolean>(false);
-   const [selectedGameType, setSelectedGameType] =
-      useState<GameType>("Ranked Arena");
-   const [selectedPlayers, setSelectedPlayers] =
-      useState<{ [player in Player]: boolean }>(defaultPlayers);
 
-   const handleStartNewSession = async () => {
-      const playersCopy = deepCopy(selectedPlayers);
-      for (const player in playersCopy) {
-         const playerPlaying = playersCopy[player as Player];
-         if (!playerPlaying) delete playersCopy[player as Player];
-      }
+   useEffect(() => {
+      console.log("eventResponse:", eventResponse);
+   }, [eventResponse]);
 
-      const fbDoc = await createSession({
-         players: playersCopy,
-         matches: {},
-         createdAt: new Date(),
-      });
-
+   const handleStartNewSession = async (session: Session) => {
+      const fbDoc = await createSession(session);
       router.push(`/sessions/${fbDoc?.docId}`);
    };
 
@@ -66,63 +62,59 @@ const HomeClient = ({ sessions, matchesPlayed, wins, loses }: Props) => {
    const winPer = !isNaN((wins / matchesPlayed) * 100)
       ? `${Math.round((wins / matchesPlayed) * 100)}%`
       : `0%`;
+   let haloMapCount: any = {};
+   const matches: any = {};
+   sessions?.forEach((session: Session) => {
+      for (const matchId in session?.matches) {
+         matches[matchId] = session?.matches[matchId];
+      }
+   });
+   const matchIds: Array<string> = Object.keys(matches);
+   matchIds.forEach((mId: string) => {
+      const match = matches[mId as keyof object];
+      if (!match?.map) return;
+      if (!haloMapCount[match.map]) haloMapCount[match.map] = 1;
+      else haloMapCount[match.map] += 1;
+   });
+   let mostCommonMapCount: number = 0;
+   let mostCommonMap: Array<GameMap | undefined> = [];
+   for (const map in haloMapCount) {
+      if (haloMapCount[map] > mostCommonMapCount)
+         mostCommonMapCount = haloMapCount[map];
+   }
+   for (const map in haloMapCount) {
+      if (haloMapCount[map] === mostCommonMapCount)
+         mostCommonMap.push(map as GameMap);
+   }
    const cards = [
       { title: "Games Played", value: matchesPlayed },
       { title: "Total Wins", value: wins },
       { title: "Total Loses", value: loses },
       { title: "Win %", value: winPer },
+      { title: "Most Played Map", value: mostCommonMap?.join(", ") || "N/A" },
    ];
 
    return (
       <PageContainer>
          {/* <div className="flex h-screen items-center justify-center"> */}
-         <div className="flex flex-row justify-between items-center">
+         {/* <div className="flex flex-row justify-between items-center">
             <Typography variant="h5" placeholder={undefined}>
                Previous Sessions
             </Typography>
             <Button
                onClick={() => {
+                  console.log("emitting message");
+                  // socket.emit("sendMsg", "new session being created...");
+                  // socketEmit("sendMsg", "YO YO");
                   setModalOpen(true);
                }}
                placeholder={undefined}
             >
                Start New Session
             </Button>
-         </div>
+         </div> */}
 
-         <div className="flex flex-row flex-wrap w-full gap-2 bg-gray-50 p-2 rounded-lg">
-            {cards?.map((card: any, i: number) => {
-               return (
-                  <Card
-                     className="w-[calc(50%-8px)] sm:max-w-[200px]"
-                     placeholder={undefined}
-                     key={i}
-                  >
-                     <CardBody
-                        className="text-center p-2"
-                        placeholder={undefined}
-                     >
-                        <Typography
-                           variant="h6"
-                           color="blue-gray"
-                           className="mb-1 font-normal"
-                           placeholder={undefined}
-                        >
-                           {card?.title}
-                        </Typography>
-                        <Typography
-                           variant="h4"
-                           color="blue-gray"
-                           className=""
-                           placeholder={undefined}
-                        >
-                           {card?.value}
-                        </Typography>
-                     </CardBody>
-                  </Card>
-               );
-            })}
-         </div>
+         <AnalyticCards cards={cards} />
 
          <SessionsTable
             sessions={sessions}
@@ -131,105 +123,31 @@ const HomeClient = ({ sessions, matchesPlayed, wins, loses }: Props) => {
             }}
          />
 
-         <Dialog
-            dismiss={{
-               // @ts-ignore
-               outsidePress: (e: any) => {
-                  setModalOpen(false);
-               },
-            }}
-            open={modalOpen}
-            placeholder={undefined}
-            handler={function (value: any): void {
-               console.log("handler");
-            }}
-         >
-            <div className="p-4 flex flex-col gap-2">
-               <Typography variant="h5" placeholder={undefined}>
-                  Configure The Session
-               </Typography>
-               <hr className="my-2" />
-               <Typography variant="h6" placeholder={undefined}>
-                  Who's playing?
-               </Typography>
-               <div className="flex flex-row flex-wrap">
-                  {allPlayers?.map((player: Player, i: number) => {
-                     return (
-                        <Checkbox
-                           key={i}
-                           label={player}
-                           color="blue"
-                           crossOrigin={undefined}
-                           onClick={() => {
-                              const val = !selectedPlayers[player];
-                              setSelectedPlayers((prevState: any) => ({
-                                 ...prevState,
-                                 [player]: val,
-                              }));
-                           }}
-                        />
-                     );
-                  })}
-               </div>
-               <Typography variant="h6" placeholder={undefined}>
-                  What game type?
-               </Typography>
-               <Select placeholder={undefined}>
-                  {gameTypes?.map((gt: GameType) => {
-                     return (
-                        <Option
-                           key={gt}
-                           onClick={() => {
-                              setSelectedGameType(gt);
-                           }}
-                        >
-                           {gt}
-                        </Option>
-                     );
-                  })}
-               </Select>
-               <hr className="my-2" />
-               <Button onClick={handleStartNewSession} placeholder={undefined}>
-                  Let's Get Some Dubs
-               </Button>
-            </div>
-         </Dialog>
+         {/* <div className="pb-10"></div> */}
+
+         <CreateNewSession
+            modalOpen={modalOpen}
+            setModalOpen={setModalOpen}
+            handleStartNewSession={handleStartNewSession}
+         />
+
+         <FloatingBtnContainer>
+            <Button
+               placeholder={undefined}
+               onClick={() => {
+                  console.log("emitting message");
+                  // socket.emit("sendMsg", "new session being created...");
+                  // socketEmit("sendMsg", "YO YO");
+                  setModalOpen(true);
+               }}
+               className="flex items-center gap-2"
+            >
+               <PlusIcon width={24} height={24} color="currentColor" />
+               Start New Session
+            </Button>
+         </FloatingBtnContainer>
       </PageContainer>
    );
-   // const [record, setRecord] = useState<{ wins: number; loses: number }>();
-
-   // return (
-   //    <div className="flex flex-col gap-4">
-   //       <div className="text-center">
-   //          <Typography placeholder={undefined} variant="h3">
-   //             Wins
-   //          </Typography>
-   //          <div className="flex flex-row items-center gap-4 justify-center">
-   //             <IconButton placeholder={"Minus"}>
-   //                <MinusIcon className="h-5 w-5" />
-   //             </IconButton>
-   //             <div>{record?.wins || 0}</div>
-   //             <IconButton placeholder={"Plus"}>
-   //                <PlusIcon className="h-5 w-5" />
-   //             </IconButton>
-   //          </div>
-   //       </div>
-   //       <div className="text-center">
-   //          <Typography placeholder={undefined} variant="h3">
-   //             Loses
-   //          </Typography>
-   //          <div className="flex flex-row items-center gap-4 justify-center">
-   //             <IconButton placeholder={"Minus"}>
-   //                <MinusIcon className="h-5 w-5" />
-   //             </IconButton>
-   //             <div>{record?.loses || 0}</div>
-   //             <IconButton placeholder={"Plus"}>
-   //                <PlusIcon className="h-5 w-5" />
-   //             </IconButton>
-   //          </div>
-   //       </div>
-   //    </div>
-   // );
 };
 
 export default HomeClient;

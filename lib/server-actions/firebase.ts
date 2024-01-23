@@ -3,18 +3,14 @@
 import { db } from "@/utilities/db";
 import { deepCopy } from "@/utilities/helpers";
 import {
-   addDoc,
    collection,
-   deleteDoc,
    doc,
    getDoc,
    getDocs,
-   limit,
    orderBy,
    query,
    setDoc,
    updateDoc,
-   where,
 } from "firebase/firestore";
 import { Match } from "../types";
 
@@ -98,86 +94,3 @@ export async function saveMatch(sessionId: string, reqBody: any) {
       throw new Error(err);
    }
 }
-
-// export async function getTotalWinLossRatio() {
-//    try {
-//       // const dbRes = await getDocs(query(collection(db, "sessions")));
-
-//       let totalWins = 0,
-//          totalLoses = 0;
-//       // dbRes.forEach((doc: any) => {
-//       //    let data = doc.data();
-//       //    data?.matches?.forEach((match: Match) => {
-//       //       if (match?.win) totalWins += 1;
-//       //       else totalLoses += 1;
-//       //    });
-//       // });
-
-//       const winsSnapshot = await getDocs(
-//          query(
-//             collection(db, "sessions"),
-//             where("matches", "array-contains", { win: true })
-//          )
-//       );
-//       const losesSnapshot = await getDocs(
-//          query(
-//             collection(db, "sessions"),
-//             where("matches", "array-contains", { win: false })
-//          )
-//       );
-
-//       console.log("winsSnapshot:", winsSnapshot?.size);
-//       totalWins = winsSnapshot?.size;
-//       totalLoses = losesSnapshot?.size;
-
-//       return { wins: totalWins, loses: totalLoses };
-//    } catch (err: any) {
-//       console.log("err:", err);
-//    }
-// }
-
-// With matches being sub collection
-// export async function createSession(reqBody: any) {
-//    try {
-//       const newDocId = crypto.randomUUID();
-//       const matches = [...reqBody.matches, { testing: "sup man" }];
-//       delete reqBody["matches"];
-
-//       // create doc in session collection
-//       await setDoc(doc(db, "sessions", newDocId), reqBody);
-//       const docRef = doc(db, "sessions", newDocId);
-//       const dbRes = await getDoc(docRef);
-
-//       // create subcollection 'matches' within the session document
-//       const matchesColRef = collection(docRef, "matches");
-
-//       /// add each match to the "matches" subcollection
-//       for (const match of matches) await addDoc(matchesColRef, match);
-
-//       let dataToReturn = null;
-//       if (dbRes?.exists()) {
-//          const data = dbRes?.data();
-
-//          // Fetch the "matches" subcollection
-//          const matchesQuery = query(collection(docRef, "matches"));
-//          const matchesSnapshot = await getDocs(matchesQuery);
-
-//          const matchesData: any = [];
-//          matchesSnapshot.forEach((matchDoc) => {
-//             // if (matchDoc.exists()) matchesData.push(matchDoc.data());
-//             if (matchDoc.exists()) {
-//                deleteDoc(
-//                   doc(db, "sessions", newDocId, "matches", matchDoc?.id)
-//                );
-//             }
-//          });
-
-//          dataToReturn = { data, docId: newDocId, matches: matchesData };
-//       }
-
-//       return deepCopy(dataToReturn);
-//    } catch (err: any) {
-//       console.log("err createSession:", err);
-//       throw new Error(err);
-//    }
-// }

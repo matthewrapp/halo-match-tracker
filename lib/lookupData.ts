@@ -1,4 +1,4 @@
-import { GameMode, GameType, Player } from "./types";
+import { GameMap, GameMode, GameType, Player } from "./types";
 
 export const gameTypes: Array<GameType> = [
    "Ranked Arena",
@@ -22,5 +22,15 @@ export const gameModes: Array<GameMode> = [
    "Oddball",
    "Strongholds",
    "Team Slayer",
+   "Other",
+];
+
+export const gameMaps: Array<GameMap> = [
+   "Aquarious",
+   "Catalyst",
+   "Forbidden",
+   "Live Fire",
+   "Recharge",
+   "Streets",
    "Other",
 ];

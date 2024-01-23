@@ -1,12 +1,7 @@
 "use client";
 import { playerComponentClassNames } from "@/lib/maps";
 import { Player, Session } from "@/lib/types";
-import {
-   Card,
-   CardBody,
-   IconButton,
-   Typography,
-} from "@material-tailwind/react";
+import { Card, CardBody, Typography } from "@material-tailwind/react";
 import React, { useState } from "react";
 
 interface Props {
