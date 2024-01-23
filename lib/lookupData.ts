@@ -31,6 +31,7 @@ export const gameMaps: Array<GameMap> = [
    "Forbidden",
    "Live Fire",
    "Recharge",
+   "Solitude",
    "Streets",
    "Other",
 ];

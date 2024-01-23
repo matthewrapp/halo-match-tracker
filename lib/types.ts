@@ -20,6 +20,7 @@ export type GameMap =
    | "Forbidden"
    | "Live Fire"
    | "Recharge"
+   | "Solitude"
    | "Streets"
    | "Other";
 
