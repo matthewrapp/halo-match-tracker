@@ -25,7 +25,7 @@ const AnalyticCards = ({ cards }: Props) => {
                      >
                         {card?.title}
                      </Typography>
-                     <Tooltip content={card?.value}>
+                     <Tooltip content={card?.toolTipVal || card?.value}>
                         <Typography
                            variant="h4"
                            color="blue-gray"

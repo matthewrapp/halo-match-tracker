@@ -92,7 +92,11 @@ const HomeClient = ({ sessions, matchesPlayed, wins, loses }: Props) => {
       { title: "Wins / Loses", value: `${wins} - ${loses}` },
       // { title: "Total Loses", value: lossCount },
       { title: "Win %", value: winPer },
-      { title: "Most Played Map", value: mostCommonMap?.join(", ") || "N/A" },
+      {
+         title: "Most Played Map",
+         value: mostCommonMap?.join(", ") || "N/A",
+         toolTipVal: `${mostCommonMap?.join(", ")} - ${mostCommonMapCount}`,
+      },
    ];
 
    return (
