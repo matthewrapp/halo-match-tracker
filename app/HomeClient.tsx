@@ -86,10 +86,11 @@ const HomeClient = ({ sessions, matchesPlayed, wins, loses }: Props) => {
       if (haloMapCount[map] === mostCommonMapCount)
          mostCommonMap.push(map as GameMap);
    }
+
    const cards = [
       { title: "Games Played", value: matchesPlayed },
-      { title: "Total Wins", value: wins },
-      { title: "Total Loses", value: loses },
+      { title: "Wins / Loses", value: `${wins} - ${loses}` },
+      // { title: "Total Loses", value: lossCount },
       { title: "Win %", value: winPer },
       { title: "Most Played Map", value: mostCommonMap?.join(", ") || "N/A" },
    ];
