@@ -27,6 +27,7 @@ export const gameModes: Array<GameMode> = [
 
 export const gameMaps: Array<GameMap> = [
    "Aquarious",
+   "Argyle",
    "Catalyst",
    "Empyrean",
    "Forbidden",
