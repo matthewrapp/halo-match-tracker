@@ -16,6 +16,7 @@ export type GameType =
 
 export type GameMap =
    | "Aquarious"
+   | "Empyrean"
    | "Catalyst"
    | "Forbidden"
    | "Live Fire"

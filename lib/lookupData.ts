@@ -28,6 +28,7 @@ export const gameModes: Array<GameMode> = [
 export const gameMaps: Array<GameMap> = [
    "Aquarious",
    "Catalyst",
+   "Empyrean",
    "Forbidden",
    "Live Fire",
    "Recharge",
