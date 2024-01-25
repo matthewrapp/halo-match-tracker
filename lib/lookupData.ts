@@ -13,6 +13,7 @@ export const allPlayers: Array<Player> = [
    "zE eskky",
    "HafenNation",
    "YungJaguar",
+   "mcddp15",
 ];
 
 export const gameModes: Array<GameMode> = [

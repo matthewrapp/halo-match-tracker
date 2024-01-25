@@ -6,6 +6,7 @@ const playerColors: { [player in Player | "other"]: string } = {
    HafenNation: "green",
    "zE eskky": "orange",
    YungJaguar: "red",
+   mcddp15: "pink",
    other: "gray",
 };
 
@@ -23,6 +24,9 @@ export const playerComponentClassNames: {
    },
    YungJaguar: {
       pill: `${pillClassNames} bg-red-700`,
+   },
+   mcddp15: {
+      pill: `${pillClassNames} bg-pink-700`,
    },
    other: {
       pill: `${pillClassNames} bg-gray-700`,

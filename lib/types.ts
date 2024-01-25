@@ -26,7 +26,12 @@ export type GameMap =
    | "Streets"
    | "Other";
 
-export type Player = "zE tthrilla" | "zE eskky" | "HafenNation" | "YungJaguar";
+export type Player =
+   | "zE tthrilla"
+   | "zE eskky"
+   | "HafenNation"
+   | "YungJaguar"
+   | "mcddp15";
 
 export type Match = {
    // id: string;

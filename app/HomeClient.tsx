@@ -30,6 +30,7 @@ const defaultPlayers: { [player in Player]: boolean } = {
    "zE eskky": false,
    "zE tthrilla": false,
    YungJaguar: false,
+   mcddp15: false,
 };
 
 interface Props {
