@@ -1,5 +1,4 @@
 "use client";
-import { gameMaps, gameModes } from "@/lib/lookupData";
 import { v4 as uuidv4 } from "uuid";
 import { GameMap, GameMode, Match } from "@/lib/types";
 import {
@@ -18,6 +17,8 @@ interface Props {
    setModalOpen: (bool: boolean) => void;
    handleSaveMatch: (match: Match, id: string) => void;
    defaultData?: { [id: string]: Match };
+   gameModes: Array<GameMode>;
+   maps: Array<GameMap>;
 }
 
 const ReportMatch = ({
@@ -25,6 +26,8 @@ const ReportMatch = ({
    setModalOpen,
    handleSaveMatch,
    defaultData,
+   gameModes,
+   maps,
 }: Props) => {
    const [selectedGameMode, setSelectedGameMode] = useState<
       GameMode | undefined
@@ -125,7 +128,7 @@ const ReportMatch = ({
                      setSelectedMap(value);
                   }}
                >
-                  {gameMaps?.map((map: GameMap) => {
+                  {maps?.map((map: GameMap) => {
                      return (
                         <Option key={map} value={map}>
                            {map}

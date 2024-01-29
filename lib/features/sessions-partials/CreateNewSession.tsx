@@ -1,5 +1,4 @@
 "use client";
-import { allPlayers, gameTypes } from "@/lib/lookupData";
 import { GameType, Player, Session } from "@/lib/types";
 import { deepCopy } from "@/utilities/helpers";
 import {
@@ -24,16 +23,19 @@ interface Props {
    modalOpen: boolean;
    setModalOpen: (bool: boolean) => void;
    handleStartNewSession: (session: Session) => void;
-   // handleSaveMatch: ({ gameMode, win }: Match, id: string) => void;
+   gameTypes: Array<GameType>;
+   players: Array<Player>;
 }
 
 const CreateNewSession = ({
    modalOpen,
    setModalOpen,
    handleStartNewSession,
+   gameTypes,
+   players,
 }: Props) => {
    const [selectedPlayers, setSelectedPlayers] =
-      useState<{ [player in Player]: boolean }>(defaultPlayers);
+      useState<{ [player in Player]: boolean }>();
    const [selectedGameType, setSelectedGameType] =
       useState<GameType>("Ranked Arena");
 
@@ -60,7 +62,7 @@ const CreateNewSession = ({
                Who's playing?
             </Typography>
             <div className="flex flex-row flex-wrap">
-               {allPlayers?.map((player: Player, i: number) => {
+               {players?.map((player: Player, i: number) => {
                   return (
                      <Checkbox
                         key={i}
@@ -68,7 +70,12 @@ const CreateNewSession = ({
                         color="blue"
                         crossOrigin={undefined}
                         onClick={() => {
-                           const val = !selectedPlayers[player];
+                           let val = true;
+                           const exists =
+                              selectedPlayers &&
+                              typeof selectedPlayers[player] === "boolean";
+                           if (exists) val = !selectedPlayers[player];
+
                            setSelectedPlayers((prevState: any) => ({
                               ...prevState,
                               [player]: val,
@@ -81,7 +88,7 @@ const CreateNewSession = ({
             <Typography variant="h6" placeholder={undefined}>
                What game type?
             </Typography>
-            <Select placeholder={undefined}>
+            <Select label="Select Game Type" placeholder={undefined}>
                {gameTypes?.map((gt: GameType) => {
                   return (
                      <Option

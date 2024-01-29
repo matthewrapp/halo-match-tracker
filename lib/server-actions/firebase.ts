@@ -12,7 +12,31 @@ import {
    setDoc,
    updateDoc,
 } from "firebase/firestore";
-import { Match } from "../types";
+import { GameMap, GameMode, GameType, Player } from "../types";
+
+export async function getGameTypes() {
+   const dbRes = await getDocs(query(collection(db, "gameTypes")));
+   const gameTypes = dbRes.docs.map((doc) => doc.id) as Array<GameType>;
+   return deepCopy(gameTypes);
+}
+
+export async function getGameModes() {
+   const dbRes = await getDocs(query(collection(db, "gameModes")));
+   const gameModes = dbRes.docs.map((doc) => doc.id) as Array<GameMode>;
+   return deepCopy(gameModes);
+}
+
+export async function getMaps() {
+   const dbRes = await getDocs(query(collection(db, "maps")));
+   const maps = dbRes.docs.map((doc) => doc.id) as Array<GameMap>;
+   return deepCopy(maps);
+}
+
+export async function getPlayers() {
+   const dbRes = await getDocs(query(collection(db, "players")));
+   const players = dbRes.docs.map((doc) => doc.id) as Array<Player>;
+   return deepCopy(players);
+}
 
 export async function getSessions() {
    const dbRes = await getDocs(

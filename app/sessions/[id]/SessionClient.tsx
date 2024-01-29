@@ -1,14 +1,7 @@
 "use client";
 import PageContainer from "@/lib/common/container/PageContainer";
-import { GameMap, Match, Player, Session } from "@/lib/types";
-import {
-   Button,
-   Card,
-   CardBody,
-   IconButton,
-   Tooltip,
-   Typography,
-} from "@material-tailwind/react";
+import { GameMap, GameMode, Match, Player, Session } from "@/lib/types";
+import { IconButton } from "@material-tailwind/react";
 import React, { useEffect, useRef, useState } from "react";
 import Players from "../../../lib/features/session-partials/Players";
 import ReportMatch from "../../../lib/features/session-partials/ReportMatch";
@@ -28,9 +21,11 @@ import AnalyticCards from "@/lib/features/analytic-cards/AnalyticCards";
 interface Props {
    session: Session;
    sessionId: string;
+   gameModes: Array<GameMode>;
+   maps: Array<GameMap>;
 }
 
-const SessionClient = ({ session, sessionId }: Props) => {
+const SessionClient = ({ session, sessionId, gameModes, maps }: Props) => {
    const router = useRouter();
    const btnContainerRef = useRef<any>();
    const { socket } = useSocketIO();
@@ -87,52 +82,24 @@ const SessionClient = ({ session, sessionId }: Props) => {
    }, [modalOpen]);
 
    const matchIds: Array<string> = Object.keys(sessionData?.matches);
-   const gameCount = matchIds?.length || 0;
-   const winCount = matchIds?.filter(
+   const wins = matchIds?.filter(
       (id: string) => sessionData?.matches[id]?.win
    )?.length;
-   const lossCount = matchIds?.filter(
+   const loses = matchIds?.filter(
       (id: string) => !sessionData?.matches[id]?.win
    )?.length;
-   const winPer = !isNaN((winCount / gameCount) * 100)
-      ? `${Math.round((winCount / gameCount) * 100)}%`
-      : `0%`;
-   let haloMapCount: any = {};
-   matchIds.forEach((mId: string) => {
-      const match = sessionData?.matches[mId];
-      if (!match?.map) return;
-      if (!haloMapCount[match.map]) haloMapCount[match.map] = 1;
-      else haloMapCount[match.map] += 1;
-   });
-   let mostCommonMapCount: number = 0;
-   let mostCommonMap: Array<GameMap | undefined> = [];
-   for (const map in haloMapCount) {
-      if (haloMapCount[map] > mostCommonMapCount)
-         mostCommonMapCount = haloMapCount[map];
-   }
-   for (const map in haloMapCount) {
-      if (haloMapCount[map] === mostCommonMapCount)
-         mostCommonMap.push(map as GameMap);
-   }
-
-   const cards = [
-      { title: "Games Played", value: gameCount },
-      { title: "Wins / Loses", value: `${winCount} - ${lossCount}` },
-      // { title: "Total Loses", value: lossCount },
-      { title: "Win %", value: winPer },
-      {
-         title: "Most Played Map",
-         value: mostCommonMap?.join(", ") || "N/A",
-         toolTipVal: `${mostCommonMap?.join(", ")} - ${mostCommonMapCount}`,
-      },
-   ];
 
    return (
       <>
          <PageContainer className="max-h-[90vh]">
             <Players session={session} />
 
-            <AnalyticCards cards={cards} />
+            <AnalyticCards
+               wins={wins}
+               loses={loses}
+               matchesPlayed={matchIds?.length || 0}
+               matches={sessionData?.matches}
+            />
 
             <MatchesTable
                data={sessionData?.matches || []}
@@ -176,6 +143,8 @@ const SessionClient = ({ session, sessionId }: Props) => {
             modalOpen={modalOpen}
             setModalOpen={setModalOpen}
             handleSaveMatch={handleSaveMatch}
+            gameModes={gameModes}
+            maps={maps}
          />
       </>
    );

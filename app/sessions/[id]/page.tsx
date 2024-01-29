@@ -1,7 +1,11 @@
-import { getSessionById, getSessions } from "@/lib/server-actions/firebase";
-import { cookies } from "next/headers";
+import {
+   getGameModes,
+   getMaps,
+   getSessionById,
+} from "@/lib/server-actions/firebase";
 import React from "react";
 import SessionClient from "./SessionClient";
+import { GameMap, GameMode } from "@/lib/types";
 
 interface Props {
    params: { id: string };
@@ -10,8 +14,17 @@ interface Props {
 
 const Page = async ({ params, searchParams }: Props) => {
    const docData = await getSessionById(params?.id);
+   const gameModes = (await getGameModes()) as Array<GameMode>;
+   const maps = (await getMaps()) as Array<GameMap>;
 
-   return <SessionClient session={docData} sessionId={params?.id} />;
+   return (
+      <SessionClient
+         session={docData}
+         sessionId={params?.id}
+         gameModes={gameModes}
+         maps={maps}
+      />
+   );
 };
 
 export default Page;
