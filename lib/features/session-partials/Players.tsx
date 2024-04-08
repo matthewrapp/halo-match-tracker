@@ -22,9 +22,14 @@ const Players = ({ session }: Props) => {
          </div>
          <CardBody className="flex flex-row gap-1 p-2" placeholder={undefined}>
             {currPlayers?.map((player: Player, i: number) => {
-               const classNames =
-                  playerComponentClassNames[player]["pill"] ||
-                  playerComponentClassNames["other"]["pill"];
+               let classNames = ``;
+               if (playerComponentClassNames[player])
+                  classNames = playerComponentClassNames[player]["pill"];
+               else classNames = playerComponentClassNames["other"]["pill"];
+
+               // const classNames =
+               //    playerComponentClassNames[player]["pill"] ||
+               //    playerComponentClassNames["other"]["pill"];
                return (
                   <Typography
                      key={i}
