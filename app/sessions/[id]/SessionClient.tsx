@@ -1,4 +1,5 @@
 "use client";
+
 import PageContainer from "@/lib/common/container/PageContainer";
 import { GameMap, GameMode, Match, Player, Session } from "@/lib/types";
 import { IconButton } from "@material-tailwind/react";
@@ -10,7 +11,6 @@ import { getSessionById, saveMatch } from "@/lib/server-actions/firebase";
 import { useRouter } from "next/navigation";
 import { revalidate } from "@/lib/server-actions/revalidate";
 import { deepCopy } from "@/utilities/helpers";
-import useSocketIO from "@/lib/hooks/useSocketIO";
 import FloatingBtnContainer from "@/lib/common/floating-btn-container/FloatingBtnContainer";
 import {
    ArrowLeftEndOnRectangleIcon,
@@ -28,7 +28,6 @@ interface Props {
 const SessionClient = ({ session, sessionId, gameModes, maps }: Props) => {
    const router = useRouter();
    const btnContainerRef = useRef<any>();
-   const { socket } = useSocketIO();
    const [sessionData, setSessionData] = useState<Session>(session);
    const [modalOpen, setModalOpen] = useState<boolean>(false);
    const [currPlayers, setCurrPlayers] = useState<Array<Player>>(
@@ -38,6 +37,7 @@ const SessionClient = ({ session, sessionId, gameModes, maps }: Props) => {
 
    const handleSaveMatch = async (mToSave: Match, id: string) => {
       const matches = { ...sessionData?.matches };
+
       if (matches[id]) matches[id] = mToSave;
       else matches[id] = mToSave;
 
@@ -70,12 +70,6 @@ const SessionClient = ({ session, sessionId, gameModes, maps }: Props) => {
       const updatedSessionData = await getSessionById(sessionId);
       setSessionData(updatedSessionData);
    };
-
-   // map
-   // how bad we won or lost
-   // - ranking
-   // most played maps
-   // most played game modes
 
    useEffect(() => {
       if (!modalOpen) setMatchConfig(undefined);

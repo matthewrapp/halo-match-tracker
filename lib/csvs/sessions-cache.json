@@ -1,0 +1,2424 @@
+[
+  {
+    "players": {
+      "zE eskky": true,
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "YungJaguar": true
+    },
+    "createdAt": "2024-05-10T02:49:03.000Z",
+    "map": "Interference",
+    "matches": [],
+    "win": false,
+    "gameMode": "Team Slayer",
+    "gameType": "Ranked Arena",
+    "day": "Thursday",
+    "id": "0059f234-5db3-42d1-971c-cbb8695b5f08"
+  },
+  {
+    "matches": [],
+    "createdAt": "2024-08-02T02:01:20.000Z",
+    "gameMode": "King of the Hill",
+    "gameType": "Ranked Arena",
+    "map": "Live Fire",
+    "players": {
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "win": true,
+    "day": "Thursday",
+    "id": "00c9fc70-7bac-4879-8c39-e61456c9ed0a"
+  },
+  {
+    "map": "Empyrean",
+    "win": false,
+    "gameMode": "Capture the Flag",
+    "players": {
+      "HafenNation": true,
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "matches": [],
+    "createdAt": "2024-02-11T07:10:12.000Z",
+    "gameType": "Ranked Arena",
+    "day": "Saturday",
+    "id": "02ae9418-8c25-4514-b102-bdbc5b8cc925"
+  },
+  {
+    "win": false,
+    "matches": [],
+    "map": "Streets",
+    "gameMode": "Team Slayer",
+    "createdAt": "2024-04-22T04:59:13.000Z",
+    "players": {
+      "zE tthrilla": true,
+      "Steelblade01": true,
+      "zE eskky": true,
+      "HafenNation": true
+    },
+    "gameType": "Ranked Arena",
+    "day": "Sunday",
+    "id": "02e30094-0f54-4dc4-b6a2-7f1adcd14522"
+  },
+  {
+    "createdAt": "2024-05-14T04:11:51.000Z",
+    "win": true,
+    "matches": [],
+    "players": {
+      "HafenNation": true,
+      "Steelblade01": true,
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "gameMode": "Team Slayer",
+    "gameType": "Ranked Arena",
+    "map": "Aquarious",
+    "day": "Monday",
+    "id": "04ec525f-fefc-45e2-af94-5dda8274fb34"
+  },
+  {
+    "players": {
+      "zE tthrilla": true,
+      "YungJaguar": true,
+      "zE eskky": true
+    },
+    "createdAt": "2024-02-26T04:18:34.000Z",
+    "gameType": "Ranked Arena",
+    "win": false,
+    "gameMode": "King of the Hill",
+    "map": "Recharge",
+    "matches": [],
+    "day": "Sunday",
+    "id": "09d7393f-b5d9-4817-b030-aa9e4218acd6"
+  },
+  {
+    "createdAt": "2024-02-24T05:53:29.000Z",
+    "map": "Aquarious",
+    "gameType": "Ranked Arena",
+    "win": false,
+    "gameMode": "Capture the Flag",
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "matches": [],
+    "day": "Friday",
+    "id": "0a0676a5-6778-4b1b-a825-a27e04f39f2b"
+  },
+  {
+    "matches": [],
+    "players": {
+      "zE tthrilla": true,
+      "zE eskky": true,
+      "YungJaguar": true
+    },
+    "createdAt": "2024-07-27T03:52:50.000Z",
+    "gameType": "Ranked Arena",
+    "day": "Friday",
+    "id": "0a393a2f-3994-4e11-8f61-e45ee2ba05d7"
+  },
+  {
+    "matches": [],
+    "createdAt": "2024-02-22T05:22:47.000Z",
+    "gameMode": "Strongholds",
+    "win": false,
+    "map": "Solitude",
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "gameType": "Ranked Arena",
+    "day": "Wednesday",
+    "id": "0a72c97f-6271-4dcc-9634-df583e5bb053"
+  },
+  {
+    "matches": [],
+    "gameMode": "Capture the Flag",
+    "players": {
+      "Steelblade01": true,
+      "HafenNation": true,
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "win": false,
+    "createdAt": "2024-05-07T04:17:00.000Z",
+    "gameType": "Ranked Arena",
+    "map": "Aquarious",
+    "day": "Monday",
+    "id": "0c7547f4-799a-4b4c-bbd8-d139285e220a"
+  },
+  {
+    "map": "Interference",
+    "players": {
+      "zE eskky": true,
+      "YungJaguar": true,
+      "HafenNation": true,
+      "zE tthrilla": true
+    },
+    "gameType": "Ranked Arena",
+    "gameMode": "King of the Hill",
+    "createdAt": "2024-04-24T05:25:32.000Z",
+    "win": true,
+    "matches": [],
+    "day": "Tuesday",
+    "id": "0e54abeb-552f-41aa-b13d-c77c5d4175dc"
+  },
+  {
+    "createdAt": "2024-05-10T04:13:34.000Z",
+    "gameType": "League Play",
+    "matches": [],
+    "win": false,
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "YungJaguar": true,
+      "zE eskky": true
+    },
+    "gameMode": "Team Slayer",
+    "map": "Solitude",
+    "day": "Thursday",
+    "id": "0f749572-8fee-4648-bef2-7fd7d1b77f34"
+  },
+  {
+    "win": true,
+    "gameMode": "Strongholds",
+    "players": {
+      "zE tthrilla": true,
+      "YungJaguar": true,
+      "HafenNation": true,
+      "zE eskky": true
+    },
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "createdAt": "2024-02-06T04:44:15.000Z",
+    "map": "Recharge",
+    "day": "Monday",
+    "id": "108ae36d-dfec-4129-b46e-804ab511bcf6"
+  },
+  {
+    "win": false,
+    "gameType": "Ranked Slayer",
+    "matches": [],
+    "gameMode": "Team Slayer",
+    "map": "Forest",
+    "createdAt": "2024-03-07T04:02:02.000Z",
+    "players": {
+      "YungJaguar": true,
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "day": "Wednesday",
+    "id": "10ea6567-3f66-488f-bfb4-6d14b7267b3c"
+  },
+  {
+    "win": true,
+    "gameType": "Ranked Arena",
+    "players": {
+      "YungJaguar": true,
+      "HafenNation": true,
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "matches": [],
+    "gameMode": "Extraction",
+    "createdAt": "2024-01-22T04:38:35.000Z",
+    "day": "Sunday",
+    "id": "11142e7e-5f04-4b9e-9e53-772991cc7f11"
+  },
+  {
+    "matches": [],
+    "gameType": "Ranked Arena",
+    "players": {
+      "HafenNation": true,
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "Steelblade01": true
+    },
+    "gameMode": "Capture the Flag",
+    "win": false,
+    "createdAt": "2024-04-09T05:01:34.000Z",
+    "map": "Aquarious",
+    "day": "Monday",
+    "id": "1362e9d4-f4e1-46bf-9a88-bc23336b75de"
+  },
+  {
+    "gameMode": "Team Slayer",
+    "createdAt": "2024-05-06T04:43:52.000Z",
+    "players": {
+      "Steelblade01": true,
+      "zE tthrilla": true,
+      "HafenNation": true,
+      "zE eskky": true
+    },
+    "map": "Interference",
+    "matches": [],
+    "gameType": "Ranked Arena",
+    "win": false,
+    "day": "Sunday",
+    "id": "19e98252-1465-4593-a7df-30127b3cf817"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "players": {
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "YungJaguar": true
+    },
+    "matches": [],
+    "createdAt": "2024-07-28T02:19:27.000Z",
+    "day": "Saturday",
+    "id": "19fb5b8d-48f6-4c44-b528-0e854e7cf70c"
+  },
+  {
+    "createdAt": "2024-04-23T04:53:19.000Z",
+    "players": {
+      "Steelblade01": true,
+      "zE tthrilla": true,
+      "HafenNation": true
+    },
+    "map": "Live Fire",
+    "matches": [],
+    "gameMode": "Oddball",
+    "gameType": "Ranked Arena",
+    "win": true,
+    "day": "Monday",
+    "id": "1a39504a-2c2d-4d2a-b3f0-4627a1bd8d93"
+  },
+  {
+    "players": {
+      "YungJaguar": true,
+      "HafenNation": true,
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "createdAt": "2024-07-03T03:38:20.000Z",
+    "gameType": "Ranked Arena",
+    "gameMode": "Capture the Flag",
+    "matches": [],
+    "map": "Argyle",
+    "win": false,
+    "day": "Tuesday",
+    "id": "1a7bfac1-0002-4606-bc2b-5a340065b29a"
+  },
+  {
+    "gameMode": "Oddball",
+    "players": {
+      "zE eskky": true,
+      "HafenNation": true
+    },
+    "map": "Recharge",
+    "matches": [],
+    "win": true,
+    "gameType": "Ranked Arena",
+    "createdAt": "2024-01-26T04:27:10.000Z",
+    "day": "Thursday",
+    "id": "1c457671-ada7-4ba9-95a2-8cc78d44d6a8"
+  },
+  {
+    "matches": [],
+    "win": true,
+    "createdAt": "2024-01-23T03:29:39.000Z",
+    "gameType": "Ranked Arena",
+    "gameMode": "Strongholds",
+    "players": {
+      "HafenNation": true,
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "day": "Monday",
+    "id": "1e6c553f-f86e-43e3-9ad4-bb3f83820fec"
+  },
+  {
+    "map": "Recharge",
+    "gameType": "Ranked Arena",
+    "win": false,
+    "createdAt": "2024-04-16T03:52:23.000Z",
+    "gameMode": "Team Slayer",
+    "matches": [],
+    "players": {
+      "zE tthrilla": true,
+      "Steelblade01": true,
+      "zE eskky": true,
+      "HafenNation": true
+    },
+    "day": "Monday",
+    "id": "1f8c950e-b22e-4c8f-9ee1-7b0918640c83"
+  },
+  {
+    "createdAt": "2024-04-03T04:47:59.000Z",
+    "matches": [],
+    "map": "Live Fire",
+    "players": {
+      "HafenNation": true,
+      "YungJaguar": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "gameMode": "Oddball",
+    "gameType": "Ranked Arena",
+    "win": true,
+    "day": "Tuesday",
+    "id": "21f30912-2f95-4204-969e-b5da532ca1d4"
+  },
+  {
+    "createdAt": "2024-01-24T05:44:29.000Z",
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "gameMode": "Capture the Flag",
+    "map": "Empyrean",
+    "win": true,
+    "day": "Tuesday",
+    "id": "2223ffc9-167e-4761-b218-00ecdd0a91eb"
+  },
+  {
+    "win": true,
+    "createdAt": "2024-07-24T04:24:42.000Z",
+    "matches": [],
+    "players": {
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "map": "Solitude",
+    "gameMode": "Team Slayer",
+    "gameType": "Ranked Arena",
+    "day": "Tuesday",
+    "id": "232bc3e1-28ea-4fea-9861-486d29258c8f"
+  },
+  {
+    "map": "Recharge",
+    "matches": [],
+    "win": false,
+    "createdAt": "2024-07-23T04:45:25.000Z",
+    "gameType": "Ranked Arena",
+    "gameMode": "Oddball",
+    "players": {
+      "YungJaguar": true,
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "day": "Monday",
+    "id": "23cc325a-d3d4-457e-b8d2-631118222700"
+  },
+  {
+    "matches": [],
+    "gameType": "Ranked Arena",
+    "map": "Interference",
+    "gameMode": "Team Slayer",
+    "win": true,
+    "players": {
+      "zE tthrilla": true,
+      "zE eskky": true,
+      "Steelblade01": true,
+      "YungJaguar": true
+    },
+    "createdAt": "2024-07-28T04:10:02.000Z",
+    "day": "Saturday",
+    "id": "262a94b7-4bbf-4ed4-8d9a-99b903d0724c"
+  },
+  {
+    "win": false,
+    "matches": [],
+    "map": "Streets",
+    "players": {
+      "Steelblade01": true,
+      "zE tthrilla": true,
+      "zE eskky": true,
+      "YungJaguar": true
+    },
+    "createdAt": "2024-08-02T03:36:13.000Z",
+    "gameType": "League Play",
+    "gameMode": "Team Slayer",
+    "day": "Thursday",
+    "id": "2840fc14-21aa-4a00-8b65-df67701d892e"
+  },
+  {
+    "win": false,
+    "map": "The Pit",
+    "gameType": "Ranked Slayer",
+    "createdAt": "2024-08-02T04:49:53.000Z",
+    "players": {
+      "zE tthrilla": true,
+      "Steelblade01": true,
+      "Cnasty703": true,
+      "zE eskky": true
+    },
+    "gameMode": "Team Slayer",
+    "matches": [],
+    "day": "Thursday",
+    "id": "2a59c8dc-e331-4baa-bba4-d03691216d3e"
+  },
+  {
+    "win": false,
+    "map": "Recharge",
+    "gameMode": "Strongholds",
+    "matches": [],
+    "gameType": "Ranked Arena",
+    "players": {
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "createdAt": "2024-01-28T05:20:43.000Z",
+    "day": "Saturday",
+    "id": "2d80b459-39f0-4ae6-a0ee-85564881db2f"
+  },
+  {
+    "win": false,
+    "map": "Live Fire",
+    "players": {
+      "mcddp15": true,
+      "zE eskky": true,
+      "HafenNation": true,
+      "zE tthrilla": true
+    },
+    "createdAt": "2024-01-25T05:11:22.000Z",
+    "gameType": "Ranked Arena",
+    "gameMode": "Team Slayer",
+    "matches": [],
+    "day": "Wednesday",
+    "id": "2def9315-8598-491a-9954-734727c5d8c0"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "gameMode": "Oddball",
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "createdAt": "2024-01-28T07:16:12.000Z",
+    "map": "Streets",
+    "win": false,
+    "day": "Saturday",
+    "id": "2eded830-5921-4685-b9b3-71de56f2c29e"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "win": false,
+    "createdAt": "2024-02-09T03:51:20.000Z",
+    "matches": [],
+    "players": {
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "HafenNation": true,
+      "YungJaguar": true
+    },
+    "gameMode": "Capture the Flag",
+    "map": "Aquarious",
+    "day": "Thursday",
+    "id": "2ee146e0-bc3e-4d21-90a7-c4f3f9683130"
+  },
+  {
+    "createdAt": "2024-07-26T02:56:07.000Z",
+    "map": "Aquarious",
+    "players": {
+      "zE eskky": true,
+      "YungJaguar": true,
+      "Steelblade01": true,
+      "zE tthrilla": true
+    },
+    "win": true,
+    "gameType": "League Play",
+    "gameMode": "Team Slayer",
+    "matches": [],
+    "day": "Thursday",
+    "id": "2f17852e-2855-46b1-86c8-cdee1fe436b0"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "createdAt": "2024-01-31T06:41:07.000Z",
+    "gameMode": "Strongholds",
+    "win": false,
+    "players": {
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "map": "Live Fire",
+    "day": "Tuesday",
+    "id": "2fac16c4-cadb-4485-b4c8-5306615525bc"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "players": {
+      "HafenNation": true,
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "Steelblade01": true
+    },
+    "map": "Recharge",
+    "gameMode": "Oddball",
+    "win": true,
+    "createdAt": "2024-04-08T04:57:16.000Z",
+    "matches": [],
+    "day": "Sunday",
+    "id": "3022a514-9fa6-46b6-9b5f-5da100de037e"
+  },
+  {
+    "map": "Empyrean",
+    "players": {
+      "zE tthrilla": true,
+      "HafenNation": true,
+      "Steelblade01": true,
+      "zE eskky": true
+    },
+    "createdAt": "2024-04-17T03:42:27.000Z",
+    "matches": [],
+    "win": true,
+    "gameMode": "Capture the Flag",
+    "gameType": "Ranked Arena",
+    "day": "Tuesday",
+    "id": "3032fb3c-d9f6-47dd-92c2-a34a67ef322b"
+  },
+  {
+    "players": {
+      "HafenNation": true,
+      "YungJaguar": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "gameType": "Ranked Arena",
+    "map": "Recharge",
+    "createdAt": "2024-04-02T03:56:30.000Z",
+    "win": false,
+    "gameMode": "Oddball",
+    "matches": [],
+    "day": "Monday",
+    "id": "31fd24cb-7278-46c4-83c4-a2bddb0042f4"
+  },
+  {
+    "map": "Argyle",
+    "gameMode": "Capture the Flag",
+    "matches": [],
+    "gameType": "Ranked Arena",
+    "createdAt": "2024-02-22T05:07:21.000Z",
+    "win": true,
+    "players": {
+      "YungJaguar": true,
+      "zE tthrilla": true,
+      "HafenNation": true,
+      "zE eskky": true
+    },
+    "day": "Wednesday",
+    "id": "3312482d-20e9-47df-99b2-dd6a74625b61"
+  },
+  {
+    "win": false,
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true,
+      "YungJaguar": true
+    },
+    "gameType": "Ranked Arena",
+    "map": "Forbidden",
+    "gameMode": "Capture the Flag",
+    "createdAt": "2024-02-25T05:47:57.000Z",
+    "matches": [],
+    "day": "Saturday",
+    "id": "332fa633-7e3d-40eb-98a7-f087b97134b1"
+  },
+  {
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true,
+      "YungJaguar": true
+    },
+    "matches": [],
+    "gameMode": "Team Slayer",
+    "createdAt": "2024-04-06T16:30:13.000Z",
+    "map": "Aquarious",
+    "win": false,
+    "gameType": "Tournament Play",
+    "day": "Saturday",
+    "id": "337c0f63-409d-430b-b327-e803c9c86a96"
+  },
+  {
+    "win": false,
+    "players": {
+      "zE tthrilla": true,
+      "YungJaguar": true,
+      "HafenNation": true,
+      "zE eskky": true
+    },
+    "map": "Forbidden",
+    "gameMode": "Capture the Flag",
+    "matches": [],
+    "createdAt": "2024-03-31T03:24:37.000Z",
+    "gameType": "Ranked Arena",
+    "day": "Saturday",
+    "id": "382b0124-ca1c-4736-83df-67abc624cd66"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "win": true,
+    "createdAt": "2024-02-19T05:12:58.000Z",
+    "gameMode": "Oddball",
+    "players": {
+      "zE eskky": true,
+      "HafenNation": true,
+      "zE tthrilla": true
+    },
+    "matches": [],
+    "map": "Live Fire",
+    "day": "Sunday",
+    "id": "3cadb346-b8cd-49da-a10f-50ba86ca78cc"
+  },
+  {
+    "win": false,
+    "matches": [],
+    "players": {
+      "HafenNation": true,
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "map": "Aquarious",
+    "gameType": "Ranked Arena",
+    "createdAt": "2024-05-13T04:03:04.000Z",
+    "gameMode": "Capture the Flag",
+    "day": "Sunday",
+    "id": "3f9d8297-2175-4577-abc0-b5f6e767d742"
+  },
+  {
+    "win": true,
+    "map": "Streets",
+    "gameType": "Ranked Arena",
+    "players": {
+      "zE tthrilla": true,
+      "HafenNation": true,
+      "zE eskky": true
+    },
+    "matches": [],
+    "gameMode": "Oddball",
+    "createdAt": "2024-03-06T04:05:45.000Z",
+    "day": "Tuesday",
+    "id": "425561cd-6a38-4160-8893-e5ff5f8293c9"
+  },
+  {
+    "gameMode": "Capture the Flag",
+    "win": false,
+    "createdAt": "2024-07-08T05:01:45.000Z",
+    "players": {
+      "zE tthrilla": true,
+      "zE eskky": true,
+      "Steelblade01": true,
+      "HafenNation": true
+    },
+    "matches": [],
+    "gameType": "Ranked Arena",
+    "map": "Argyle",
+    "day": "Sunday",
+    "id": "453dc21e-5299-4e99-b3f8-5535881483c8"
+  },
+  {
+    "map": "Live Fire",
+    "gameMode": "King of the Hill",
+    "players": {
+      "zE tthrilla": true,
+      "YungJaguar": true,
+      "HafenNation": true,
+      "zE eskky": true
+    },
+    "gameType": "Ranked Arena",
+    "win": false,
+    "createdAt": "2024-02-23T05:15:56.000Z",
+    "matches": [],
+    "day": "Thursday",
+    "id": "465ca49e-405d-4a53-979a-0e9fac478402"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "gameMode": "Oddball",
+    "win": false,
+    "map": "Live Fire",
+    "players": {
+      "HafenNation": true,
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "createdAt": "2024-01-26T04:40:33.000Z",
+    "day": "Thursday",
+    "id": "48a581a4-74fa-4919-8d00-def145a84755"
+  },
+  {
+    "gameMode": "Team Slayer",
+    "gameType": "Ranked Arena",
+    "createdAt": "2024-03-25T03:20:26.000Z",
+    "matches": [],
+    "win": false,
+    "players": {
+      "zE tthrilla": true,
+      "YungJaguar": true,
+      "HafenNation": true,
+      "zE eskky": true
+    },
+    "map": "Aquarious",
+    "day": "Sunday",
+    "id": "4a0afc06-33b5-453a-9273-a7691977bb5f"
+  },
+  {
+    "matches": [],
+    "win": true,
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "createdAt": "2024-01-23T03:19:34.000Z",
+    "gameMode": "Strongholds",
+    "gameType": "Ranked Arena",
+    "day": "Monday",
+    "id": "50f278fd-c66b-4473-b5ef-edf1c292b05c"
+  },
+  {
+    "gameMode": "Oddball",
+    "matches": [],
+    "players": {
+      "YungJaguar": true,
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "HafenNation": true
+    },
+    "win": true,
+    "createdAt": "2024-01-30T06:02:03.000Z",
+    "gameType": "Ranked Arena",
+    "map": "Streets",
+    "day": "Monday",
+    "id": "526492e4-dcc8-44f3-ae8a-eb43a187cad5"
+  },
+  {
+    "players": {
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "YungJaguar": true,
+      "HafenNation": true
+    },
+    "gameType": "Ranked Arena",
+    "createdAt": "2024-01-21T05:45:40.000Z",
+    "gameMode": "Team Slayer",
+    "matches": [],
+    "win": false,
+    "day": "Saturday",
+    "id": "53eb8723-293e-4cd2-9a3b-329cf813f6eb"
+  },
+  {
+    "gameMode": "King of the Hill",
+    "win": true,
+    "map": "Live Fire",
+    "matches": [],
+    "players": {
+      "zE eskky": true,
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "YungJaguar": true
+    },
+    "createdAt": "2024-03-06T04:21:45.000Z",
+    "gameType": "Ranked Arena",
+    "day": "Tuesday",
+    "id": "542f3c5a-4f77-49ef-871a-f0d785a40827"
+  },
+  {
+    "map": "Live Fire",
+    "gameMode": "Strongholds",
+    "win": true,
+    "matches": [],
+    "players": {
+      "HafenNation": true,
+      "YungJaguar": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "createdAt": "2024-03-28T03:49:54.000Z",
+    "gameType": "Ranked Arena",
+    "day": "Wednesday",
+    "id": "54c70b35-1257-411f-9e9b-83a24ffda539"
+  },
+  {
+    "players": {
+      "zE eskky": true,
+      "HafenNation": true,
+      "Steelblade01": true,
+      "zE tthrilla": true
+    },
+    "matches": [],
+    "createdAt": "2024-07-10T05:18:34.000Z",
+    "map": "Recharge",
+    "gameType": "Ranked Arena",
+    "gameMode": "Oddball",
+    "win": false,
+    "day": "Tuesday",
+    "id": "557483b8-b164-48a7-985f-0c8df452598b"
+  },
+  {
+    "map": "Live Fire",
+    "createdAt": "2024-02-26T04:31:41.000Z",
+    "matches": [],
+    "gameType": "Ranked Arena",
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true,
+      "YungJaguar": true
+    },
+    "win": true,
+    "gameMode": "Team Slayer",
+    "day": "Sunday",
+    "id": "5585ae63-aaf7-4dc1-8268-1d7767265a8a"
+  },
+  {
+    "matches": [],
+    "players": {
+      "zE eskky": true,
+      "YungJaguar": true,
+      "zE tthrilla": true
+    },
+    "win": false,
+    "gameMode": "Oddball",
+    "map": "Live Fire",
+    "createdAt": "2024-07-31T03:44:27.000Z",
+    "gameType": "Ranked Arena",
+    "day": "Tuesday",
+    "id": "5743cdcd-c465-4c2c-b2ad-508415e9210e"
+  },
+  {
+    "map": "Argyle",
+    "win": true,
+    "createdAt": "2024-02-27T04:23:52.000Z",
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "gameMode": "Capture the Flag",
+    "players": {
+      "YungJaguar": true,
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "HafenNation": true
+    },
+    "day": "Monday",
+    "id": "58b20f9c-9585-417d-ae15-ce6888edd95f"
+  },
+  {
+    "gameMode": "Capture the Flag",
+    "gameType": "Ranked Arena",
+    "players": {
+      "zE eskky": true,
+      "HafenNation": true,
+      "zE tthrilla": true
+    },
+    "map": "Catalyst",
+    "matches": [],
+    "win": false,
+    "createdAt": "2024-01-25T04:10:48.000Z",
+    "day": "Wednesday",
+    "id": "59afdc83-ff62-4f86-81cb-858d06623550"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "players": {
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "matches": [],
+    "createdAt": "2024-07-28T02:17:36.000Z",
+    "day": "Saturday",
+    "id": "5b8b9eae-fc47-4b2e-b77f-a9714c2cabf9"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "players": {
+      "zE tthrilla": true,
+      "Steelblade01": true,
+      "zE eskky": true,
+      "HafenNation": true
+    },
+    "win": false,
+    "matches": [],
+    "map": "Empyrean",
+    "createdAt": "2024-04-26T05:08:43.000Z",
+    "gameMode": "Capture the Flag",
+    "day": "Thursday",
+    "id": "61a2c88e-8cbf-4e1c-b7ce-86b07baa7c67"
+  },
+  {
+    "gameMode": "Strongholds",
+    "win": true,
+    "createdAt": "2024-04-15T03:07:45.000Z",
+    "matches": [],
+    "map": "Live Fire",
+    "gameType": "Ranked Arena",
+    "players": {
+      "HafenNation": true,
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "day": "Sunday",
+    "id": "667e341d-a053-4ab8-ad3a-aa67c3399ce0"
+  },
+  {
+    "map": "Argyle",
+    "players": {
+      "HafenNation": true,
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "YungJaguar": true
+    },
+    "gameMode": "Capture the Flag",
+    "matches": [],
+    "createdAt": "2024-02-08T04:47:14.000Z",
+    "win": true,
+    "gameType": "Ranked Arena",
+    "day": "Wednesday",
+    "id": "66b8c911-fbc9-48a4-9735-a21a86b1ecd5"
+  },
+  {
+    "createdAt": "2024-07-31T04:40:52.000Z",
+    "players": {
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "win": false,
+    "map": "Empyrean",
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "gameMode": "Capture the Flag",
+    "day": "Tuesday",
+    "id": "67228066-cf9c-4cc5-aeff-f5e468c1ed7c"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "players": {
+      "zE eskky": true,
+      "Steelblade01": true,
+      "HafenNation": true,
+      "zE tthrilla": true
+    },
+    "win": true,
+    "matches": [],
+    "gameMode": "Capture the Flag",
+    "createdAt": "2024-07-09T03:26:23.000Z",
+    "map": "Forbidden",
+    "day": "Monday",
+    "id": "6cf3d574-8620-45ed-829a-fbffab5254fa"
+  },
+  {
+    "players": {
+      "zE tthrilla": true,
+      "HafenNation": true,
+      "zE eskky": true,
+      "YungJaguar": true
+    },
+    "win": false,
+    "map": "Recharge",
+    "createdAt": "2024-07-21T05:11:43.000Z",
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "gameMode": "Strongholds",
+    "day": "Saturday",
+    "id": "6e853072-e4e1-44ed-8bb1-a0132f455ae4"
+  },
+  {
+    "matches": [],
+    "gameMode": "Capture the Flag",
+    "map": "Empyrean",
+    "win": true,
+    "gameType": "Ranked Arena",
+    "createdAt": "2024-01-30T05:51:30.000Z",
+    "players": {
+      "zE tthrilla": true,
+      "zE eskky": true,
+      "HafenNation": true
+    },
+    "day": "Monday",
+    "id": "6e993999-4370-489a-92cd-e10e1624e6d9"
+  },
+  {
+    "gameMode": "Team Slayer",
+    "gameType": "Ranked Doubles",
+    "matches": [],
+    "createdAt": "2024-02-15T05:11:48.000Z",
+    "map": "Solitude",
+    "win": true,
+    "players": {
+      "zE tthrilla": true,
+      "HafenNation": true
+    },
+    "day": "Wednesday",
+    "id": "70b59910-20ab-4a4c-a6e7-830b0816f929"
+  },
+  {
+    "createdAt": "2024-04-25T03:02:50.000Z",
+    "matches": [],
+    "gameMode": "King of the Hill",
+    "gameType": "Ranked Arena",
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true,
+      "YungJaguar": true
+    },
+    "map": "Interference",
+    "win": true,
+    "day": "Wednesday",
+    "id": "72dd2e2e-8e2c-41d1-a4c4-459228a50f29"
+  },
+  {
+    "gameMode": "Team Slayer",
+    "win": true,
+    "gameType": "Ranked Arena",
+    "map": "Aquarious",
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "createdAt": "2024-04-08T03:24:04.000Z",
+    "matches": [],
+    "day": "Sunday",
+    "id": "73d613f3-1fc1-4cb3-80a7-38cc6bf164ec"
+  },
+  {
+    "players": {
+      "zE tthrilla": true,
+      "Steelblade01": true,
+      "HafenNation": true
+    },
+    "createdAt": "2024-05-13T04:53:26.000Z",
+    "win": true,
+    "gameType": "Ranked Arena",
+    "map": "Recharge",
+    "matches": [],
+    "gameMode": "Strongholds",
+    "day": "Sunday",
+    "id": "74ebf25a-2881-46d5-a5c5-72ec2a33e00c"
+  },
+  {
+    "win": false,
+    "map": "Solitude",
+    "matches": [],
+    "gameMode": "Team Slayer",
+    "players": {
+      "HafenNation": true,
+      "YungJaguar": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "createdAt": "2024-02-29T03:54:47.000Z",
+    "gameType": "Ranked Arena",
+    "day": "Wednesday",
+    "id": "74ecade6-0a96-469e-88a5-484bfc8efecb"
+  },
+  {
+    "createdAt": "2024-01-23T05:02:06.000Z",
+    "players": {
+      "HafenNation": true,
+      "YungJaguar": true,
+      "zE eskky": true
+    },
+    "win": false,
+    "matches": [],
+    "map": "Solitude",
+    "gameMode": "King of the Hill",
+    "day": "Monday",
+    "id": "791932ba-ca98-4eb0-a3b6-f78e1a19deb8"
+  },
+  {
+    "players": {
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "matches": [],
+    "win": false,
+    "map": "Banished Narrows",
+    "gameMode": "Team Slayer",
+    "createdAt": "2024-07-06T05:17:55.000Z",
+    "gameType": "Ranked Doubles",
+    "day": "Friday",
+    "id": "7a3918f3-16a1-47ef-8a91-3801eda2b10c"
+  },
+  {
+    "map": "Streets",
+    "createdAt": "2024-03-26T03:46:05.000Z",
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "gameMode": "Team Slayer",
+    "win": false,
+    "players": {
+      "HafenNation": true,
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "YungJaguar": true
+    },
+    "day": "Monday",
+    "id": "7aebbf90-ba2f-4733-87e0-1a57ef9423ed"
+  },
+  {
+    "win": false,
+    "createdAt": "2024-02-11T06:54:28.000Z",
+    "matches": [],
+    "gameMode": "Team Slayer",
+    "players": {
+      "YungJaguar": true,
+      "zE eskky": true,
+      "HafenNation": true,
+      "zE tthrilla": true
+    },
+    "map": "Streets",
+    "gameType": "Ranked Arena",
+    "day": "Saturday",
+    "id": "7b92c536-aaed-4e94-8759-fdef859ca45f"
+  },
+  {
+    "gameMode": "King of the Hill",
+    "createdAt": "2024-07-03T04:24:37.000Z",
+    "map": "Recharge",
+    "gameType": "Ranked Arena",
+    "players": {
+      "HafenNation": true,
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "Steelblade01": true
+    },
+    "win": true,
+    "matches": [],
+    "day": "Tuesday",
+    "id": "7bcb69cf-ae69-46c8-a1b2-e01a41a6a1f3"
+  },
+  {
+    "map": "Recharge",
+    "gameType": "League Play",
+    "win": false,
+    "gameMode": "Strongholds",
+    "players": {
+      "YungJaguar": true,
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "HafenNation": true
+    },
+    "matches": [],
+    "createdAt": "2024-04-05T02:54:13.000Z",
+    "day": "Thursday",
+    "id": "7bd53f69-f756-45f0-99a2-f24985336018"
+  },
+  {
+    "win": false,
+    "matches": [],
+    "players": {
+      "zE eskky": true,
+      "HafenNation": true,
+      "YungJaguar": true,
+      "zE tthrilla": true
+    },
+    "gameType": "Ranked Arena",
+    "gameMode": "King of the Hill",
+    "map": "Live Fire",
+    "createdAt": "2024-04-09T02:57:39.000Z",
+    "day": "Monday",
+    "id": "7e0d03b9-abfa-461f-a395-e46cdf50285a"
+  },
+  {
+    "matches": [],
+    "createdAt": "2024-07-26T04:23:23.000Z",
+    "players": {
+      "zE tthrilla": true,
+      "Steelblade01": true,
+      "zE eskky": true
+    },
+    "gameType": "Ranked Arena",
+    "win": true,
+    "gameMode": "King of the Hill",
+    "map": "Interference",
+    "day": "Thursday",
+    "id": "82356155-9aab-4e6a-bfaa-c11abdb7c557"
+  },
+  {
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "matches": [],
+    "gameMode": "Oddball",
+    "createdAt": "2024-02-05T05:25:53.000Z",
+    "map": "Streets",
+    "gameType": "Ranked Arena",
+    "win": false,
+    "day": "Sunday",
+    "id": "8365a0a7-82c7-4f3f-8fc1-adcdc2c435ca"
+  },
+  {
+    "createdAt": "2024-07-04T04:11:29.000Z",
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "map": "Recharge",
+    "win": false,
+    "players": {
+      "HafenNation": true,
+      "Steelblade01": true,
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "gameMode": "Oddball",
+    "day": "Wednesday",
+    "id": "83f61586-e078-459a-ba4f-d93215f133a9"
+  },
+  {
+    "createdAt": "2024-05-01T03:23:19.000Z",
+    "matches": [],
+    "gameMode": "Team Slayer",
+    "gameType": "League Play",
+    "players": {
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "YungJaguar": true,
+      "HafenNation": true
+    },
+    "map": "Streets",
+    "win": false,
+    "day": "Tuesday",
+    "id": "8841e208-4367-448a-a3a8-04ace286018f"
+  },
+  {
+    "map": "Aquarious",
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "win": true,
+    "players": {
+      "zE tthrilla": true,
+      "Steelblade01": true,
+      "zE eskky": true,
+      "HafenNation": true
+    },
+    "createdAt": "2024-04-21T06:19:42.000Z",
+    "gameMode": "Capture the Flag",
+    "day": "Saturday",
+    "id": "8a2e2e46-4068-446e-8425-dc1be156864d"
+  },
+  {
+    "win": true,
+    "players": {
+      "zE tthrilla": true,
+      "HafenNation": true,
+      "zE eskky": true
+    },
+    "map": "Argyle",
+    "gameType": "Ranked Arena",
+    "gameMode": "Capture the Flag",
+    "matches": [],
+    "createdAt": "2024-02-23T03:57:50.000Z",
+    "day": "Thursday",
+    "id": "8c82f957-7633-47d6-ac84-fa82b377d974"
+  },
+  {
+    "matches": [],
+    "gameType": "Ranked Arena",
+    "win": true,
+    "map": "Streets",
+    "createdAt": "2024-02-29T05:36:16.000Z",
+    "gameMode": "Oddball",
+    "players": {
+      "zE tthrilla": true,
+      "zE eskky": true,
+      "HafenNation": true
+    },
+    "day": "Wednesday",
+    "id": "8c9e61f2-1db1-4804-af07-023886a9daa0"
+  },
+  {
+    "createdAt": "2024-05-01T05:26:55.000Z",
+    "map": "Live Fire",
+    "matches": [],
+    "win": true,
+    "gameType": "Ranked Arena",
+    "gameMode": "Oddball",
+    "players": {
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "day": "Tuesday",
+    "id": "8ef29775-e098-47f5-9e12-4ef91e010a44"
+  },
+  {
+    "win": true,
+    "matches": [],
+    "gameMode": "Oddball",
+    "map": "Recharge",
+    "gameType": "Ranked Arena",
+    "createdAt": "2024-01-27T06:12:28.000Z",
+    "players": {
+      "zE tthrilla": true,
+      "zE eskky": true,
+      "HafenNation": true
+    },
+    "day": "Friday",
+    "id": "91c6f901-86d3-4cf7-a343-63ad4be40b55"
+  },
+  {
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "map": "Argyle",
+    "createdAt": "2024-05-17T04:00:35.000Z",
+    "matches": [],
+    "gameMode": "Capture the Flag",
+    "gameType": "Ranked Arena",
+    "win": true,
+    "day": "Thursday",
+    "id": "92201830-6422-4c74-a407-a447d5697c6f"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "createdAt": "2024-04-15T05:46:16.000Z",
+    "matches": [],
+    "map": "Recharge",
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "Steelblade01": true
+    },
+    "gameMode": "Strongholds",
+    "win": false,
+    "day": "Sunday",
+    "id": "92cbc42a-d23e-47d9-9020-1bf35a3db038"
+  },
+  {
+    "gameMode": "Capture the Flag",
+    "createdAt": "2024-02-14T04:26:42.000Z",
+    "matches": [],
+    "gameType": "Ranked Arena",
+    "map": "Empyrean",
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "YungJaguar": true,
+      "zE eskky": true
+    },
+    "win": false,
+    "day": "Tuesday",
+    "id": "98ecccc2-b417-40c5-b1c1-bf5190b34366"
+  },
+  {
+    "players": {
+      "YungJaguar": true,
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "HafenNation": true
+    },
+    "gameMode": "Team Slayer",
+    "createdAt": "2024-04-22T03:33:40.000Z",
+    "gameType": "Ranked Arena",
+    "win": true,
+    "matches": [],
+    "map": "Aquarious",
+    "day": "Sunday",
+    "id": "99ccd723-96d8-467d-b929-37f6ad9aedf9"
+  },
+  {
+    "gameMode": "Team Slayer",
+    "createdAt": "2024-07-29T03:22:38.000Z",
+    "gameType": "Ranked Arena",
+    "map": "Interference",
+    "players": {
+      "YungJaguar": true,
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "Steelblade01": true
+    },
+    "win": false,
+    "matches": [],
+    "day": "Sunday",
+    "id": "9a20626e-2b52-419a-8771-0d8a0aa1b383"
+  },
+  {
+    "map": "Argyle",
+    "gameMode": "Capture the Flag",
+    "players": {
+      "zE tthrilla": true,
+      "Steelblade01": true,
+      "zE eskky": true
+    },
+    "createdAt": "2024-07-29T03:34:57.000Z",
+    "matches": [],
+    "gameType": "Ranked Arena",
+    "win": true,
+    "day": "Sunday",
+    "id": "9aacb9fc-90a9-434b-b337-707b5f41360c"
+  },
+  {
+    "map": "Recharge",
+    "createdAt": "2024-01-29T05:47:18.000Z",
+    "matches": [],
+    "players": {
+      "zE eskky": true,
+      "HafenNation": true,
+      "zE tthrilla": true
+    },
+    "win": false,
+    "gameType": "Ranked Arena",
+    "gameMode": "King of the Hill",
+    "day": "Sunday",
+    "id": "a054aed7-0d47-4d93-9356-d1f48cdd620b"
+  },
+  {
+    "win": true,
+    "gameMode": "Team Slayer",
+    "map": "Recharge",
+    "gameType": "League Play",
+    "players": {
+      "HafenNation": true,
+      "YungJaguar": true,
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "matches": [],
+    "createdAt": "2024-04-11T03:05:24.000Z",
+    "day": "Wednesday",
+    "id": "a5670c52-18a9-4da6-a2e1-b78877727986"
+  },
+  {
+    "players": {
+      "zE tthrilla": true,
+      "YungJaguar": true,
+      "zE eskky": true,
+      "HafenNation": true
+    },
+    "gameMode": "Team Slayer",
+    "matches": [],
+    "createdAt": "2024-01-29T04:44:15.000Z",
+    "map": "Aquarious",
+    "win": false,
+    "gameType": "Ranked Arena",
+    "day": "Sunday",
+    "id": "a673bb5d-cb52-40cc-81a7-28fcb1e13255"
+  },
+  {
+    "matches": [],
+    "gameMode": "Strongholds",
+    "win": true,
+    "createdAt": "2024-08-01T05:17:15.000Z",
+    "gameType": "Ranked Arena",
+    "map": "Interference",
+    "players": {
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "day": "Wednesday",
+    "id": "aa8822b6-5b79-4f85-8b64-e419a52e90b4"
+  },
+  {
+    "win": true,
+    "players": {
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "YungJaguar": true,
+      "HafenNation": true
+    },
+    "createdAt": "2024-01-31T04:44:46.000Z",
+    "matches": [],
+    "gameMode": "Capture the Flag",
+    "map": "Forbidden",
+    "gameType": "Ranked Arena",
+    "day": "Tuesday",
+    "id": "abd28ff2-2dec-4f1b-bffd-7b145045d772"
+  },
+  {
+    "map": "Argyle",
+    "win": false,
+    "gameType": "Ranked Arena",
+    "gameMode": "Capture the Flag",
+    "players": {
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "createdAt": "2024-07-21T06:29:39.000Z",
+    "matches": [],
+    "day": "Saturday",
+    "id": "ad2d237f-f465-4848-88ed-c8502af2b220"
+  },
+  {
+    "map": "Recharge",
+    "win": false,
+    "createdAt": "2024-02-14T05:41:46.000Z",
+    "matches": [],
+    "gameType": "Ranked Arena",
+    "players": {
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "HafenNation": true
+    },
+    "gameMode": "King of the Hill",
+    "day": "Tuesday",
+    "id": "aec57fce-0ec7-4eb4-b024-d799b1e664ef"
+  },
+  {
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true,
+      "YungJaguar": true
+    },
+    "win": true,
+    "map": "Recharge",
+    "createdAt": "2024-03-30T04:00:43.000Z",
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "gameMode": "Oddball",
+    "day": "Friday",
+    "id": "b0820475-c520-449c-8707-00d280a662ce"
+  },
+  {
+    "map": "Live Fire",
+    "gameMode": "King of the Hill",
+    "players": {
+      "YungJaguar": true,
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "createdAt": "2024-01-23T04:55:44.000Z",
+    "win": true,
+    "matches": [],
+    "day": "Monday",
+    "id": "b8069c25-d89f-4b2c-bd87-2d39a5e311eb"
+  },
+  {
+    "map": "Aquarious",
+    "players": {
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "YungJaguar": true,
+      "HafenNation": true
+    },
+    "gameMode": "Capture the Flag",
+    "createdAt": "2024-03-12T04:07:39.000Z",
+    "matches": [],
+    "win": false,
+    "gameType": "Ranked Arena",
+    "day": "Monday",
+    "id": "ba7b06d9-b681-41a7-801c-e696aa55064c"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "win": true,
+    "map": "Live Fire",
+    "gameMode": "Strongholds",
+    "createdAt": "2024-04-06T03:53:05.000Z",
+    "players": {
+      "zE eskky": true,
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "YungJaguar": true
+    },
+    "day": "Friday",
+    "id": "be556cfd-dc63-4808-91a5-4957b52d7346"
+  },
+  {
+    "gameMode": "Team Slayer",
+    "map": "Aquarious",
+    "createdAt": "2024-07-30T04:45:43.000Z",
+    "players": {
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "matches": [],
+    "win": false,
+    "gameType": "Ranked Doubles",
+    "day": "Monday",
+    "id": "bf98c3db-dc45-4209-83ed-8bce7e027ad4"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "players": {
+      "zE eskky": true,
+      "Steelblade01": true,
+      "zE tthrilla": true
+    },
+    "win": true,
+    "map": "Argyle",
+    "createdAt": "2024-08-02T04:02:09.000Z",
+    "matches": [],
+    "gameMode": "Capture the Flag",
+    "day": "Thursday",
+    "id": "bf98fef6-bb5f-48c6-8130-52da527066c2"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "createdAt": "2024-02-08T05:32:23.000Z",
+    "win": false,
+    "matches": [],
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "map": "Solitude",
+    "gameMode": "King of the Hill",
+    "day": "Wednesday",
+    "id": "c125506d-322e-4010-970b-942a7b2fe932"
+  },
+  {
+    "matches": [],
+    "players": {
+      "zE eskky": true,
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "YungJaguar": true
+    },
+    "map": "Live Fire",
+    "gameType": "Ranked Arena",
+    "win": true,
+    "gameMode": "King of the Hill",
+    "createdAt": "2024-04-23T03:36:01.000Z",
+    "day": "Monday",
+    "id": "c15e176e-a46c-458b-85d3-37788e94d6ea"
+  },
+  {
+    "win": true,
+    "players": {
+      "zE tthrilla": true,
+      "YungJaguar": true,
+      "zE eskky": true
+    },
+    "matches": [],
+    "createdAt": "2024-07-07T03:28:15.000Z",
+    "gameMode": "Team Slayer",
+    "map": "Argyle",
+    "gameType": "Ranked Snipers",
+    "day": "Saturday",
+    "id": "c279915b-c815-4eb3-9792-1bbb7096a47b"
+  },
+  {
+    "players": {
+      "Steelblade01": true,
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "matches": [],
+    "map": "Forbidden",
+    "createdAt": "2024-05-22T03:32:24.000Z",
+    "gameType": "Ranked Arena",
+    "gameMode": "Capture the Flag",
+    "win": false,
+    "day": "Tuesday",
+    "id": "c33eaa6d-651b-4082-9050-1d3a865dc59b"
+  },
+  {
+    "gameMode": "Capture the Flag",
+    "createdAt": "2024-02-05T03:58:30.000Z",
+    "matches": [],
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true
+    },
+    "map": "Forbidden",
+    "win": true,
+    "gameType": "Ranked Arena",
+    "day": "Sunday",
+    "id": "c5063437-3244-4630-8418-79ef6de3e8a8"
+  },
+  {
+    "createdAt": "2024-04-19T03:19:44.000Z",
+    "win": false,
+    "matches": [],
+    "gameMode": "Capture the Flag",
+    "players": {
+      "YungJaguar": true,
+      "HafenNation": true,
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "map": "Forbidden",
+    "gameType": "League Play",
+    "day": "Thursday",
+    "id": "c6172457-96ac-4f44-8917-e15bf5340135"
+  },
+  {
+    "win": true,
+    "createdAt": "2024-07-11T02:17:26.000Z",
+    "matches": [],
+    "map": "Live Fire",
+    "gameMode": "King of the Hill",
+    "gameType": "Tournament Play",
+    "players": {
+      "HafenNation": true,
+      "zE eskky": true,
+      "Steelblade01": true,
+      "zE tthrilla": true
+    },
+    "day": "Wednesday",
+    "id": "c6ddc20a-855e-4add-8e31-61d575aabba3"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "map": "Streets",
+    "matches": [],
+    "players": {
+      "zE eskky": true,
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "YungJaguar": true
+    },
+    "win": false,
+    "createdAt": "2024-04-07T03:50:30.000Z",
+    "gameMode": "Oddball",
+    "day": "Saturday",
+    "id": "c739e69b-3595-4d15-ba6f-49de05192a40"
+  },
+  {
+    "players": {
+      "YungJaguar": true,
+      "zE tthrilla": true,
+      "HafenNation": true
+    },
+    "matches": [],
+    "gameType": "Ranked Arena",
+    "createdAt": "2024-01-22T03:50:48.000Z",
+    "gameMode": "Strongholds",
+    "win": false,
+    "day": "Sunday",
+    "id": "c73bd222-7ac2-46d4-a9bf-430324b8271f"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "map": "Interference",
+    "matches": [],
+    "createdAt": "2024-07-27T03:39:04.000Z",
+    "win": true,
+    "gameMode": "King of the Hill",
+    "players": {
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "day": "Friday",
+    "id": "c7616329-3254-4c1a-a599-f98e6c17dfcd"
+  },
+  {
+    "matches": [],
+    "createdAt": "2024-04-19T04:22:02.000Z",
+    "win": true,
+    "gameMode": "Capture the Flag",
+    "gameType": "Ranked Arena",
+    "map": "Aquarious",
+    "players": {
+      "HafenNation": true,
+      "YungJaguar": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "day": "Thursday",
+    "id": "c7ef75d5-7bc4-459f-80b3-25eda7e23762"
+  },
+  {
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "Steelblade01": true
+    },
+    "matches": [],
+    "createdAt": "2024-04-25T06:06:01.000Z",
+    "map": "Recharge",
+    "gameMode": "King of the Hill",
+    "gameType": "Ranked Arena",
+    "win": true,
+    "day": "Wednesday",
+    "id": "c82a31f4-4a8e-4623-bb10-79a72bba41c4"
+  },
+  {
+    "createdAt": "2024-07-07T04:30:23.000Z",
+    "players": {
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "matches": [],
+    "win": false,
+    "gameMode": "Team Slayer",
+    "map": "Solitude",
+    "gameType": "Ranked Doubles",
+    "day": "Saturday",
+    "id": "c93b7b65-ea3e-45ce-ab1f-5f9dbb066320"
+  },
+  {
+    "matches": [],
+    "gameType": "Ranked Arena",
+    "win": true,
+    "createdAt": "2024-02-19T04:50:28.000Z",
+    "gameMode": "Team Slayer",
+    "players": {
+      "zE tthrilla": true,
+      "zE eskky": true,
+      "HafenNation": true,
+      "YungJaguar": true
+    },
+    "map": "Streets",
+    "day": "Sunday",
+    "id": "c97fd1d6-0c42-49af-9f94-d4bc8eb5c7b0"
+  },
+  {
+    "win": false,
+    "players": {
+      "zE tthrilla": true,
+      "Steelblade01": true,
+      "zE eskky": true,
+      "HafenNation": true
+    },
+    "createdAt": "2024-05-20T03:36:18.000Z",
+    "gameMode": "Capture the Flag",
+    "map": "Forbidden",
+    "matches": [],
+    "gameType": "Ranked Arena",
+    "day": "Sunday",
+    "id": "ca6f6bb1-bd34-4605-85c0-7f1893de6740"
+  },
+  {
+    "win": true,
+    "map": "Live Fire",
+    "players": {
+      "zE eskky": true,
+      "HafenNation": true,
+      "zE tthrilla": true
+    },
+    "matches": [],
+    "gameMode": "Oddball",
+    "gameType": "Ranked Arena",
+    "createdAt": "2024-03-05T05:18:17.000Z",
+    "day": "Monday",
+    "id": "cecb3f11-7fca-4751-83bd-1a2377620bec"
+  },
+  {
+    "win": true,
+    "players": {
+      "zE eskky": true,
+      "HafenNation": true,
+      "YungJaguar": true,
+      "zE tthrilla": true
+    },
+    "createdAt": "2024-03-13T03:46:38.000Z",
+    "matches": [],
+    "gameType": "Ranked Arena",
+    "gameMode": "Team Slayer",
+    "map": "Aquarious",
+    "day": "Tuesday",
+    "id": "d0607902-ff9e-46ab-8da3-b387849f4841"
+  },
+  {
+    "gameMode": "Capture the Flag",
+    "createdAt": "2024-01-21T06:15:42.000Z",
+    "matches": [],
+    "win": false,
+    "players": {
+      "zE eskky": true,
+      "HafenNation": true
+    },
+    "gameType": "Ranked Arena",
+    "day": "Saturday",
+    "id": "d4d91051-439d-48d1-a5fd-abf42533ac8a"
+  },
+  {
+    "players": {
+      "YungJaguar": true,
+      "HafenNation": true,
+      "zE tthrilla": true
+    },
+    "matches": [],
+    "win": true,
+    "createdAt": "2024-02-05T04:00:26.000Z",
+    "gameMode": "King of the Hill",
+    "map": "Live Fire",
+    "gameType": "Ranked Arena",
+    "day": "Sunday",
+    "id": "d54dafd9-ab68-40cf-a97f-964dd6a703b2"
+  },
+  {
+    "win": false,
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "players": {
+      "zE tthrilla": true,
+      "HafenNation": true,
+      "YungJaguar": true,
+      "zE eskky": true
+    },
+    "map": "Solitude",
+    "gameMode": "Strongholds",
+    "createdAt": "2024-03-11T02:40:13.000Z",
+    "day": "Sunday",
+    "id": "d7ae6f82-4358-49fc-b806-ae04d98c26a5"
+  },
+  {
+    "createdAt": "2024-02-09T04:57:17.000Z",
+    "win": true,
+    "map": "Recharge",
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "YungJaguar": true,
+      "zE eskky": true
+    },
+    "gameMode": "Oddball",
+    "matches": [],
+    "gameType": "Ranked Arena",
+    "day": "Thursday",
+    "id": "d7f70d18-b25f-447d-85ff-87b0784390db"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "players": {
+      "YungJaguar": true,
+      "zE eskky": true,
+      "HafenNation": true,
+      "zE tthrilla": true
+    },
+    "gameMode": "Capture the Flag",
+    "matches": [],
+    "win": true,
+    "map": "Empyrean",
+    "createdAt": "2024-02-01T04:58:22.000Z",
+    "day": "Wednesday",
+    "id": "d896c865-0071-4c4b-857d-f80876f325ae"
+  },
+  {
+    "matches": [],
+    "gameMode": "Team Slayer",
+    "createdAt": "2024-03-14T04:20:58.000Z",
+    "players": {
+      "YungJaguar": true,
+      "zE eskky": true,
+      "HafenNation": true,
+      "zE tthrilla": true
+    },
+    "gameType": "Ranked Arena",
+    "win": false,
+    "map": "Recharge",
+    "day": "Wednesday",
+    "id": "d931a172-e944-43d6-a6e5-0b74b4be335a"
+  },
+  {
+    "createdAt": "2024-07-20T04:27:03.000Z",
+    "win": false,
+    "map": "Live Fire",
+    "matches": [],
+    "players": {
+      "HafenNation": true,
+      "Steelblade01": true,
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "gameType": "Ranked Arena",
+    "gameMode": "King of the Hill",
+    "day": "Friday",
+    "id": "da519b37-e6dc-4c1a-b652-1f73244ff154"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "gameMode": "Capture the Flag",
+    "win": false,
+    "players": {
+      "HafenNation": true,
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "YungJaguar": true
+    },
+    "matches": [],
+    "map": "Aquarious",
+    "createdAt": "2024-02-21T05:04:47.000Z",
+    "day": "Tuesday",
+    "id": "dc94a017-edc8-415b-9ca6-5320f20b6755"
+  },
+  {
+    "win": true,
+    "map": "Argyle",
+    "players": {
+      "zE eskky": true,
+      "Steelblade01": true,
+      "zE tthrilla": true,
+      "HafenNation": true
+    },
+    "gameMode": "Capture the Flag",
+    "createdAt": "2024-05-09T04:26:52.000Z",
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "day": "Wednesday",
+    "id": "de8968e1-04ca-48bd-b819-381da3e35a43"
+  },
+  {
+    "map": "Recharge",
+    "gameMode": "Team Slayer",
+    "win": false,
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "createdAt": "2024-04-25T03:55:59.000Z",
+    "players": {
+      "HafenNation": true,
+      "Steelblade01": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "day": "Wednesday",
+    "id": "df9345fc-c438-4aec-8719-1bd87776336f"
+  },
+  {
+    "players": {
+      "zE eskky": true,
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "YungJaguar": true
+    },
+    "matches": [],
+    "gameType": "Ranked Arena",
+    "createdAt": "2024-02-14T04:48:33.000Z",
+    "day": "Tuesday",
+    "id": "dfc0c23c-4001-4109-abd1-888855046753"
+  },
+  {
+    "map": "Argyle",
+    "win": true,
+    "players": {
+      "YungJaguar": true,
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "matches": [],
+    "createdAt": "2024-02-05T05:11:37.000Z",
+    "gameMode": "Capture the Flag",
+    "gameType": "Ranked Arena",
+    "day": "Sunday",
+    "id": "e0552711-2d56-46d2-b869-e6c478e45125"
+  },
+  {
+    "win": true,
+    "map": "Solitude",
+    "createdAt": "2024-03-05T05:06:25.000Z",
+    "gameMode": "King of the Hill",
+    "gameType": "Ranked Arena",
+    "players": {
+      "YungJaguar": true,
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "matches": [],
+    "day": "Monday",
+    "id": "e163d4b8-81e4-4380-9ce9-b9b8aedaa287"
+  },
+  {
+    "win": false,
+    "gameMode": "Team Slayer",
+    "matches": [],
+    "createdAt": "2024-05-01T04:18:54.000Z",
+    "players": {
+      "zE eskky": true,
+      "Steelblade01": true,
+      "zE tthrilla": true,
+      "HafenNation": true
+    },
+    "gameType": "Ranked Arena",
+    "map": "Live Fire",
+    "day": "Tuesday",
+    "id": "e1dd6ea2-d34d-41e4-bd6f-7b10a09a6645"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "win": true,
+    "map": "Forbidden",
+    "createdAt": "2024-05-13T04:14:15.000Z",
+    "gameMode": "Capture the Flag",
+    "players": {
+      "zE eskky": true,
+      "zE tthrilla": true,
+      "Steelblade01": true,
+      "HafenNation": true
+    },
+    "day": "Sunday",
+    "id": "e2810d00-90e0-4542-9d2b-77f5d83c5b44"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "win": false,
+    "matches": [],
+    "createdAt": "2024-03-15T04:56:01.000Z",
+    "players": {
+      "HafenNation": true,
+      "YungJaguar": true,
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "gameMode": "Capture the Flag",
+    "map": "Argyle",
+    "day": "Thursday",
+    "id": "e765880f-ab01-4899-aedb-fbb9c219b95b"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "players": {
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "createdAt": "2024-07-30T03:59:21.000Z",
+    "win": true,
+    "map": "Recharge",
+    "gameMode": "Team Slayer",
+    "day": "Monday",
+    "id": "e7724bff-cb37-479a-bbe4-e219bdd560df"
+  },
+  {
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "Steelblade01": true
+    },
+    "gameType": "Ranked Arena",
+    "createdAt": "2024-04-16T05:10:45.000Z",
+    "matches": [],
+    "map": "Recharge",
+    "gameMode": "King of the Hill",
+    "win": true,
+    "day": "Monday",
+    "id": "e7d4b1cc-d508-4a8a-997a-8c77c0d0e6fd"
+  },
+  {
+    "createdAt": "2024-01-23T06:26:48.000Z",
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "map": "Recharge",
+    "gameMode": "King of the Hill",
+    "players": {
+      "zE tthrilla": true,
+      "HafenNation": true,
+      "zE eskky": true
+    },
+    "win": true,
+    "day": "Monday",
+    "id": "ea40c5c4-d1be-4abd-b270-753a6b434890"
+  },
+  {
+    "players": {
+      "zE tthrilla": true,
+      "Steelblade01": true,
+      "zE eskky": true,
+      "HafenNation": true
+    },
+    "gameMode": "Strongholds",
+    "createdAt": "2024-05-08T05:55:39.000Z",
+    "gameType": "Ranked Arena",
+    "win": true,
+    "map": "Interference",
+    "matches": [],
+    "day": "Tuesday",
+    "id": "ef858e4a-d16d-4558-a5dc-f4cfec7ac124"
+  },
+  {
+    "map": "Forbidden",
+    "createdAt": "2024-02-06T05:27:11.000Z",
+    "players": {
+      "zE eskky": true,
+      "HafenNation": true,
+      "zE tthrilla": true
+    },
+    "matches": [],
+    "win": false,
+    "gameType": "Ranked Arena",
+    "gameMode": "Capture the Flag",
+    "day": "Monday",
+    "id": "f1a6be78-586b-4e6f-90d7-1deaa3ec9316"
+  },
+  {
+    "createdAt": "2024-04-26T03:11:06.000Z",
+    "gameMode": "Team Slayer",
+    "win": false,
+    "gameType": "League Play",
+    "players": {
+      "YungJaguar": true,
+      "zE tthrilla": true,
+      "HafenNation": true,
+      "zE eskky": true
+    },
+    "map": "Solitude",
+    "matches": [],
+    "day": "Thursday",
+    "id": "f1d39f1a-4824-4963-8ad5-5834a15c2a7d"
+  },
+  {
+    "map": "Interference",
+    "gameMode": "King of the Hill",
+    "win": false,
+    "matches": [],
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true,
+      "Steelblade01": true
+    },
+    "createdAt": "2024-05-21T04:32:54.000Z",
+    "gameType": "Ranked Arena",
+    "day": "Monday",
+    "id": "f226af8e-f3db-40c4-a802-251a3367845e"
+  },
+  {
+    "createdAt": "2024-02-09T05:20:12.000Z",
+    "players": {
+      "zE tthrilla": true,
+      "HafenNation": true,
+      "zE eskky": true
+    },
+    "matches": [],
+    "gameType": "Ranked Arena",
+    "win": false,
+    "gameMode": "Strongholds",
+    "map": "Recharge",
+    "day": "Thursday",
+    "id": "f4e68462-15db-4721-a6ad-08516205a498"
+  },
+  {
+    "createdAt": "2024-02-27T05:57:19.000Z",
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "win": false,
+    "players": {
+      "zE tthrilla": true,
+      "HafenNation": true,
+      "zE eskky": true
+    },
+    "map": "Solitude",
+    "gameMode": "King of the Hill",
+    "day": "Monday",
+    "id": "f61639c5-b56b-45c6-9979-f1f09e5e841e"
+  },
+  {
+    "createdAt": "2024-02-25T06:10:27.000Z",
+    "gameMode": "Strongholds",
+    "matches": [],
+    "map": "Live Fire",
+    "players": {
+      "zE tthrilla": true,
+      "HafenNation": true,
+      "zE eskky": true
+    },
+    "gameType": "Ranked Arena",
+    "win": true,
+    "day": "Saturday",
+    "id": "f64942db-78f0-4ca5-a242-eced5085f405"
+  },
+  {
+    "gameType": "Ranked Arena",
+    "win": false,
+    "map": "Argyle",
+    "matches": [],
+    "gameMode": "Capture the Flag",
+    "createdAt": "2024-01-24T04:35:07.000Z",
+    "players": {
+      "YungJaguar": true,
+      "zE tthrilla": true,
+      "zE eskky": true,
+      "HafenNation": true
+    },
+    "day": "Tuesday",
+    "id": "f65d6c4b-9b86-40b8-a156-aeb187c9c37b"
+  },
+  {
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "zE eskky": true
+    },
+    "map": "Sylvanus",
+    "gameMode": "Team Slayer",
+    "createdAt": "2024-03-07T04:23:48.000Z",
+    "matches": [],
+    "win": false,
+    "gameType": "Ranked Slayer",
+    "day": "Wednesday",
+    "id": "f886b424-e658-4459-aa0d-1e118d804686"
+  },
+  {
+    "matches": [],
+    "createdAt": "2024-03-29T02:59:25.000Z",
+    "map": "Solitude",
+    "players": {
+      "YungJaguar": true,
+      "zE tthrilla": true,
+      "zE eskky": true,
+      "HafenNation": true
+    },
+    "gameType": "League Play",
+    "win": false,
+    "gameMode": "Team Slayer",
+    "day": "Thursday",
+    "id": "fb4d1a36-3654-4694-8b78-2cd267d1f4b2"
+  },
+  {
+    "win": false,
+    "players": {
+      "YungJaguar": true,
+      "zE eskky": true,
+      "zE tthrilla": true
+    },
+    "gameMode": "Team Slayer",
+    "createdAt": "2024-07-24T04:09:44.000Z",
+    "map": "Recharge",
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "day": "Tuesday",
+    "id": "fc0913bb-3c29-4d21-b54b-6662442e55be"
+  },
+  {
+    "map": "Streets",
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "YungJaguar": true
+    },
+    "createdAt": "2024-02-19T03:30:20.000Z",
+    "gameMode": "Team Slayer",
+    "win": false,
+    "gameType": "Ranked Arena",
+    "matches": [],
+    "day": "Sunday",
+    "id": "fc7e3b69-df14-4b44-ab1e-dd637eacc1ee"
+  },
+  {
+    "map": "Argyle",
+    "players": {
+      "HafenNation": true,
+      "zE tthrilla": true,
+      "Steelblade01": true,
+      "zE eskky": true
+    },
+    "matches": [],
+    "win": false,
+    "gameMode": "Capture the Flag",
+    "gameType": "Ranked Arena",
+    "createdAt": "2024-04-18T03:44:53.000Z",
+    "day": "Wednesday",
+    "id": "ff2a3e4d-61c3-49ff-bea6-d9277e41f026"
+  },
+  {
+    "gameMode": "Oddball",
+    "gameType": "Ranked Arena",
+    "map": "Recharge",
+    "players": {
+      "zE tthrilla": true,
+      "zE eskky": true,
+      "HafenNation": true
+    },
+    "matches": [],
+    "createdAt": "2024-02-12T05:32:09.000Z",
+    "win": true,
+    "day": "Sunday",
+    "id": "ffccb38c-01c2-4494-a830-65dc75e9d2a2"
+  }
+]

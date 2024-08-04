@@ -1,7 +1,15 @@
 "use client";
+
 import { Match } from "@/lib/types";
 import { PencilSquareIcon, TrashIcon } from "@heroicons/react/24/solid";
-import { Card, IconButton, Typography } from "@material-tailwind/react";
+import {
+   Card,
+   IconButton,
+   Typography,
+   Accordion,
+   AccordionBody,
+   AccordionHeader,
+} from "@material-tailwind/react";
 import React from "react";
 
 const TABLE_HEAD = ["Game Mode", "Won", ""];
@@ -11,6 +19,8 @@ interface Props {
 }
 
 const MatchesTable = ({ data, onClick }: Props) => {
+   // console.log("data:", data);
+
    return (
       <Card
          className=" w-full h-full overflow-auto shadow-none bg-gray-50 p-4 rounded-lg max-h-[700px]"

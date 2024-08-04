@@ -1,7 +1,8 @@
 "use client";
-import { playerComponentClassNames } from "@/lib/maps";
-import { Player, Session } from "@/lib/types";
-import { PencilSquareIcon } from "@heroicons/react/24/solid";
+
+import { playerComponentClassNames, playerPillClasses } from "@/lib/maps";
+import { Player, PlayerConfig, Session } from "@/lib/types";
+import { PencilSquareIcon, TrashIcon } from "@heroicons/react/24/solid";
 import {
    Card,
    IconButton,
@@ -11,45 +12,38 @@ import {
 import React, { useEffect, useState } from "react";
 
 const TABLE_HEAD = ["Players", "W/L Ratio", "Date", ""];
-const players: Array<Player> = [
-   "zE tthrilla",
-   "zE eskky",
-   "HafenNation",
-   "YungJaguar",
-];
 
 interface Props {
    sessions: Array<Session>;
-   onClick?: (action: "edit", sessionId: string) => void;
+   players: Array<Record<Player, PlayerConfig>>;
+   onClick?: (action: "edit" | "delete", sessionId: string) => void;
 }
 
-const SessionsTable = ({ sessions, onClick }: Props) => {
+const SessionsTable = ({ sessions, onClick, players }: Props) => {
    const [data, setData] = useState<Array<any>>([]);
 
    useEffect(() => {
-      if (!!sessions?.length) {
-         const tableData = sessions?.map((session: Session) => {
-            let wins = 0,
-               losses = 0;
-            Object.keys(session?.matches)?.forEach((mId: string) => {
-               const match = session?.matches[mId];
-               if (match?.win) wins += 1;
-               else losses += 1;
-            });
-
-            return {
-               ...session,
-               players: Object.keys(session?.players),
-               matchesPlayed: session?.matches?.length,
-               wlRatio: `${wins} / ${losses}`,
-               createdAt: new Date(session?.createdAt)?.toLocaleDateString(
-                  "en-US"
-               ),
-            };
+      const tableData = sessions?.map((session: Session) => {
+         let wins = 0,
+            losses = 0;
+         Object.keys(session?.matches)?.forEach((mId: string) => {
+            const match = session?.matches[mId];
+            if (match?.win) wins += 1;
+            else losses += 1;
          });
 
-         setData(tableData);
-      }
+         return {
+            ...session,
+            players: Object.keys(session?.players),
+            matchesPlayed: session?.matches?.length,
+            wlRatio: `${wins} / ${losses}`,
+            createdAt: new Date(session?.createdAt)?.toLocaleDateString(
+               "en-US"
+            ),
+         };
+      });
+
+      setData(tableData || []);
    }, [sessions]);
 
    return (
@@ -58,31 +52,28 @@ const SessionsTable = ({ sessions, onClick }: Props) => {
          placeholder={undefined}
       >
          <div className="flex flex-col gap-1 mb-2">
-            <Typography
-               variant="paragraph"
-               color="blue-gray"
-               placeholder={undefined}
-            >
-               Legend:
+            <Typography variant="h5" color="blue-gray" placeholder={undefined}>
+               Sessions
             </Typography>
-            <div className="flex items-center gap-1">
-               {players?.map((player: Player, i: number) => {
+            {/* <div className="flex items-center gap-1">
+               {players?.map((player, i) => {
+                  const name = Object.keys(player)[0];
+                  const config = player[name as keyof object] as PlayerConfig;
                   return (
                      <Typography
-                        key={player}
+                        key={name}
                         variant="small"
-                        // color="blue-gray"
                         className={
-                           playerComponentClassNames[player]["pill"] ||
-                           playerComponentClassNames["other"]["pill"]
+                           playerPillClasses[config?.color] ||
+                           playerPillClasses["gray"]
                         }
                         placeholder={undefined}
                      >
-                        {player}
+                        {name}
                      </Typography>
                   );
                })}
-            </div>
+            </div> */}
          </div>
          <table className="w-full min-w-max table-auto text-left">
             <thead>
@@ -107,7 +98,7 @@ const SessionsTable = ({ sessions, onClick }: Props) => {
             <tbody>
                {data?.map(
                   (
-                     { players, matchesPlayed, wlRatio, createdAt, docId }: any,
+                     { players, matchesPlayed, wlRatio, createdAt, id }: any,
                      index: number
                   ) => {
                      const isLast = index === data?.length - 1;
@@ -173,7 +164,7 @@ const SessionsTable = ({ sessions, onClick }: Props) => {
                               <IconButton
                                  placeholder={undefined}
                                  onClick={() => {
-                                    onClick && onClick("edit", docId);
+                                    onClick && onClick("edit", id);
                                  }}
                                  className="bg-transparent shadow-none"
                                  variant="text"
@@ -184,6 +175,20 @@ const SessionsTable = ({ sessions, onClick }: Props) => {
                                     color="currentColor"
                                  />
                               </IconButton>
+                              {/* <IconButton
+                                 placeholder={undefined}
+                                 onClick={() => {
+                                    onClick && onClick("delete", id);
+                                 }}
+                                 className="bg-transparent shadow-none"
+                                 variant="text"
+                              >
+                                 <TrashIcon
+                                    width={24}
+                                    height={24}
+                                    color="red"
+                                 />
+                              </IconButton> */}
                            </td>
                         </tr>
                      );

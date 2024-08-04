@@ -15,7 +15,7 @@ const didWinArr: Array<"Yes" | "No"> = ["Yes", "No"];
 interface Props {
    modalOpen: boolean;
    setModalOpen: (bool: boolean) => void;
-   handleSaveMatch: (match: Match, id: string) => void;
+   handleSaveMatch: (match: Match, id: string) => Promise<void>;
    defaultData?: { [id: string]: Match };
    gameModes: Array<GameMode>;
    maps: Array<GameMap>;
@@ -54,18 +54,24 @@ const ReportMatch = ({
       setSelectedGameMode(undefined);
       setDidWin(undefined);
       setSelectedMap(undefined);
+      setMatchId(undefined);
    };
 
    const handleReportMatch = async (e: any) => {
       if (!selectedGameMode || typeof didWin !== "boolean" || !selectedMap)
          return;
       const newMatchId = uuidv4();
-      handleSaveMatch(
+
+      await handleSaveMatch(
          {
             gameMode: selectedGameMode,
             map: selectedMap,
             win: didWin,
-            createdAt: new Date(),
+            // convert to string, so the dates all are handled the same within db
+            createdAt:
+               matchId && defaultData
+                  ? defaultData[matchId]?.createdAt
+                  : new Date()?.toISOString(),
          },
          matchId || newMatchId
       );

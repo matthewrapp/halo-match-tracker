@@ -33,20 +33,25 @@ export type Player =
    | "YungJaguar"
    | "mcddp15";
 
+export type PlayerConfig = {
+   color: PlayerColor;
+};
+
 export type Match = {
    // id: string;
    gameMode: GameMode;
    win: boolean;
    map: GameMap | undefined;
-   createdAt: Date;
+   createdAt: Date | string;
 };
 
 export type Session = {
+   id?: string;
    players: Array<Player>;
    gameType: GameType;
    // matches: Array<Match>;
    matches: { [id: string]: Match };
-   createdAt: Date;
+   createdAt: Date | string;
 };
 
 export type SocketEvent =
@@ -64,3 +69,13 @@ export type SocketEventResponse = {
       [key: string]: any;
    };
 };
+
+export type PlayerColor =
+   | "blue"
+   | "green"
+   | "orange"
+   | "red"
+   | "pink"
+   | "cyan"
+   | "purple"
+   | "gray";

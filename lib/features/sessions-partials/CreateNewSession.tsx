@@ -1,5 +1,6 @@
 "use client";
-import { GameType, Player, Session } from "@/lib/types";
+
+import { GameType, Player, PlayerConfig, Session } from "@/lib/types";
 import { deepCopy } from "@/utilities/helpers";
 import {
    Button,
@@ -11,20 +12,12 @@ import {
 } from "@material-tailwind/react";
 import React, { useState } from "react";
 
-const defaultPlayers: { [player in Player]: boolean } = {
-   HafenNation: false,
-   "zE eskky": false,
-   "zE tthrilla": false,
-   YungJaguar: false,
-   mcddp15: false,
-};
-
 interface Props {
    modalOpen: boolean;
    setModalOpen: (bool: boolean) => void;
    handleStartNewSession: (session: Session) => void;
    gameTypes: Array<GameType>;
-   players: Array<Player>;
+   players: Array<Record<Player, PlayerConfig>>;
 }
 
 const CreateNewSession = ({
@@ -62,23 +55,24 @@ const CreateNewSession = ({
                Who's playing?
             </Typography>
             <div className="flex flex-row flex-wrap">
-               {players?.map((player: Player, i: number) => {
+               {players?.map((player, i) => {
+                  const name = Object.keys(player)[0] as Player;
                   return (
                      <Checkbox
                         key={i}
-                        label={player}
+                        label={name}
                         color="blue"
                         crossOrigin={undefined}
                         onClick={() => {
                            let val = true;
                            const exists =
                               selectedPlayers &&
-                              typeof selectedPlayers[player] === "boolean";
-                           if (exists) val = !selectedPlayers[player];
+                              typeof selectedPlayers[name] === "boolean";
+                           if (exists) val = !selectedPlayers[name];
 
                            setSelectedPlayers((prevState: any) => ({
                               ...prevState,
-                              [player]: val,
+                              [name]: val,
                            }));
                         }}
                      />
@@ -111,12 +105,11 @@ const CreateNewSession = ({
                      if (!playerPlaying) delete playersCopy[player as Player];
                   }
 
-                  console.log("here??");
                   handleStartNewSession({
                      players: playersCopy,
                      gameType: selectedGameType,
                      matches: {},
-                     createdAt: new Date(),
+                     createdAt: new Date()?.toISOString(),
                   });
                }}
                placeholder={undefined}
