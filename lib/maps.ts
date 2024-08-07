@@ -28,6 +28,8 @@ export const playerComponentClassNames: {
    mcddp15: {
       pill: `${pillClassNames} bg-pink-700`,
    },
+   Cnasty703: { pill: `${pillClassNames} bg-gray-700` },
+   Steelblade01: { pill: `${pillClassNames} bg-gray-700` },
    other: {
       pill: `${pillClassNames} bg-gray-700`,
    },
