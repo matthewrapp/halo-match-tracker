@@ -55,25 +55,6 @@ const SessionsTable = ({ sessions, onClick, players }: Props) => {
             <Typography variant="h5" color="blue-gray" placeholder={undefined}>
                Sessions
             </Typography>
-            {/* <div className="flex items-center gap-1">
-               {players?.map((player, i) => {
-                  const name = Object.keys(player)[0];
-                  const config = player[name as keyof object] as PlayerConfig;
-                  return (
-                     <Typography
-                        key={name}
-                        variant="small"
-                        className={
-                           playerPillClasses[config?.color] ||
-                           playerPillClasses["gray"]
-                        }
-                        placeholder={undefined}
-                     >
-                        {name}
-                     </Typography>
-                  );
-               })}
-            </div> */}
          </div>
          <table className="w-full min-w-max table-auto text-left">
             <thead>

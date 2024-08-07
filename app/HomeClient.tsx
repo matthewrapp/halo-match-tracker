@@ -41,6 +41,7 @@ const HomeClient = ({
    }, [eventResponse]);
 
    const handleStartNewSession = async (session: Session) => {
+      // before creating a new session, let's see if a session already exists using the same players
       const fbDoc = await createSession(session);
       router.push(`/sessions/${fbDoc?.id}`);
    };

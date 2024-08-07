@@ -17,6 +17,8 @@ import {
    PlusIcon,
 } from "@heroicons/react/24/solid";
 import AnalyticCards from "@/lib/features/analytic-cards/AnalyticCards";
+import Matches from "@/lib/features/session-partials/Matches";
+import MatchContextProvider from "@/lib/features/session-partials/MatchContextProvider";
 
 interface Props {
    session: Session;
@@ -88,20 +90,20 @@ const SessionClient = ({ session, sessionId, gameModes, maps }: Props) => {
          <PageContainer className="max-h-[90vh]">
             <Players session={session} />
 
-            <AnalyticCards
-               wins={wins}
-               loses={loses}
-               matchesPlayed={matchIds?.length || 0}
-               matches={sessionData?.matches}
-            />
+            <MatchContextProvider matches={sessionData?.matches}>
+               <AnalyticCards
+                  wins={wins}
+                  loses={loses}
+                  matchesPlayed={matchIds?.length || 0}
+                  matches={sessionData?.matches}
+               />
+               <Matches
+                  handleDeleteMatch={handleDeleteMatch}
+                  handleEditMatch={handleEditMatch}
+                  sessionData={sessionData}
+               />
+            </MatchContextProvider>
 
-            <MatchesTable
-               data={sessionData?.matches || []}
-               onClick={(action: "edit" | "delete", id: string) => {
-                  if (action === "edit") handleEditMatch(id);
-                  else if (action === "delete") handleDeleteMatch(id);
-               }}
-            />
             <FloatingBtnContainer>
                <IconButton
                   placeholder={undefined}

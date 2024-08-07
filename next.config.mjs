@@ -1,17 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
    reactStrictMode: false,
-
-   // webpack: (config) => {
-   //    config.resolve.fallback = {
-   //       ...config.resolve.fallback,
-   //       net: false,
-   //       os: false,
-   //       tls: false,
-   //       fs: false,
-   //    };
-   //    return config;
-   // },
+   async redirects() {
+      return [
+         {
+            source: "/",
+            destination: "/seshs",
+            permanent: false,
+         },
+      ];
+   },
 };
 
 export default nextConfig;

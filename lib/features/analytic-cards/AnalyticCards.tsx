@@ -1,7 +1,8 @@
 "use client";
+
+import React from "react";
 import { GameMap, GameMode, Match } from "@/lib/types";
 import { Card, CardBody, Tooltip, Typography } from "@material-tailwind/react";
-import React from "react";
 
 interface Props {
    wins: number;

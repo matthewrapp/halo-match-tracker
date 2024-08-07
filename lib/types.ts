@@ -31,7 +31,9 @@ export type Player =
    | "zE eskky"
    | "HafenNation"
    | "YungJaguar"
-   | "mcddp15";
+   | "mcddp15"
+   | "Cnasty703"
+   | "Steelblade01";
 
 export type PlayerConfig = {
    color: PlayerColor;

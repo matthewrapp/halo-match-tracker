@@ -6,6 +6,7 @@ import {
 import React from "react";
 import SessionClient from "./SessionClient";
 import { GameMap, GameMode } from "@/lib/types";
+import { notFound } from "next/navigation";
 
 interface Props {
    params: { id: string };
@@ -13,6 +14,7 @@ interface Props {
 }
 
 const Page = async ({ params, searchParams }: Props) => {
+   return notFound();
    const docData = await getSessionById(params?.id);
    const gameModes = (await getGameModes()) as Array<GameMode>;
    const maps = (await getMaps()) as Array<GameMap>;

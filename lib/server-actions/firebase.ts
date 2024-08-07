@@ -41,43 +41,58 @@ export async function getPlayers() {
    return deepCopy(players);
 }
 
-export async function getSessions() {
+export async function getSessions(version?: 1) {
    const dbRes = await getDocs(
       query(collection(db, "sessions"), orderBy("createdAt", "desc"))
    );
+   if (version && version === 1) {
+      const sessions = dbRes.docs.map((document) => {
+         const data = document.data();
+         const sessionDocId = document?.id;
+         return {
+            ...data,
+            id: sessionDocId,
+         };
+      });
 
-   let totalWins = 0;
-   let totalLoses = 0;
-   let totalMatches = 0;
-   const res = dbRes.docs.map((document) => {
-      const data = document.data();
-      const sessionDocId = document?.id;
+      // backup sessions whenever loaded, just as a fail-safe for now
+      await backupSesssions();
 
-      const matchIdArr = Object.keys(data?.matches);
-      if (!!matchIdArr?.length) {
-         totalMatches += matchIdArr?.length;
-         matchIdArr?.forEach((mId: string) => {
-            const match = data?.matches[mId];
-            if (match?.win) totalWins += 1;
-            else totalLoses += 1;
-         });
-      }
+      return deepCopy(sessions);
+   } else {
+      let totalWins = 0;
+      let totalLoses = 0;
+      let totalMatches = 0;
+      const res = dbRes.docs.map((document) => {
+         const data = document.data();
+         const sessionDocId = document?.id;
 
-      return {
-         ...data,
-         id: sessionDocId,
-      };
-   });
+         const matchIdArr = Object.keys(data?.matches);
+         if (!!matchIdArr?.length) {
+            totalMatches += matchIdArr?.length;
+            matchIdArr?.forEach((mId: string) => {
+               const match = data?.matches[mId];
+               if (match?.win) totalWins += 1;
+               else totalLoses += 1;
+            });
+         }
 
-   // backup sessions whenever loaded, just as a fail-safe for now
-   await backupSesssions();
+         return {
+            ...data,
+            id: sessionDocId,
+         };
+      });
 
-   return deepCopy({
-      sessions: res,
-      matchesPlayed: totalMatches,
-      wins: totalWins,
-      loses: totalLoses,
-   });
+      // backup sessions whenever loaded, just as a fail-safe for now
+      await backupSesssions();
+
+      return deepCopy({
+         sessions: res,
+         matchesPlayed: totalMatches,
+         wins: totalWins,
+         loses: totalLoses,
+      });
+   }
 }
 
 export async function deleteSession(documentId: string) {
@@ -137,7 +152,9 @@ export async function getSessionById(docId: string) {
       let dbRes: any = await getDoc(doc(db, "sessions", docId));
       if (dbRes?.exists()) {
          const data = dbRes.data();
-         dbRes = { ...data, matches: sortMatches(data?.matches) };
+         dbRes = { ...data, matches: sortMatches(data?.matches), id: docId };
+      } else {
+         dbRes = { message: "Session not found.", status: 404, error: true };
       }
 
       return deepCopy(dbRes);
@@ -149,6 +166,7 @@ export async function getSessionById(docId: string) {
 
 export async function saveMatch(sessionId: string, reqBody: any) {
    try {
+      if (!sessionId) throw new Error("Session id is undefined.");
       const docRef = doc(db, "sessions", sessionId);
       await updateDoc(docRef, reqBody);
       return { status: 200, message: "Match saved success!" };

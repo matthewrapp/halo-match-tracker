@@ -9,30 +9,40 @@ import Table, {
 } from "@/lib/common/components/Table";
 import { Match } from "@/lib/types";
 import { PencilSquareIcon, TrashIcon } from "@heroicons/react/24/solid";
-import { Card, IconButton, Typography } from "@material-tailwind/react";
-import React from "react";
+import { IconButton, Typography } from "@material-tailwind/react";
+import React, { useContext } from "react";
+import { MatchContext } from "./MatchContextProvider";
+import { deepCopy } from "@/utilities/helpers";
 
-const TABLE_HEAD = ["Game Mode", "Won", ""];
+const TABLE_HEAD = ["Game Mode", "Map", "Won", ""];
 
-type DateType = { [id: string]: Match };
-interface Props {
-   data: DateType;
-   onClick?: (action: "edit" | "delete", matchId: string) => void;
-   tableTitle?: string;
-}
+interface Props {}
 
-const MatchesTable = ({ data, onClick, tableTitle }: Props) => {
+const MatchesTable = ({}: Props) => {
+   const {
+      matchMap,
+      setMatchConfig,
+      setMatchModalOpen,
+      handleDeleteMatch,
+      matchMapKey,
+   } = useContext(MatchContext);
+   const matches = matchMap[matchMapKey];
+
+   // keeping this within the MatchesTable component because it's not being used anywhere else
+   const handleEditMatch = async (matchId: string) => {
+      const copy = deepCopy(matches);
+      const matchIds = Object.keys(copy);
+      const foundMatchId: string | undefined = matchIds?.find(
+         (mId: string) => mId === matchId
+      );
+      setMatchConfig({
+         [foundMatchId as string]: copy[foundMatchId as string],
+      });
+      setMatchModalOpen(true);
+   };
+
    return (
-      <Card
-         className="w-full h-full overflow-auto shadow-none bg-gray-50 p-4 rounded-lg max-h-[700px] flex flex-col gap-2"
-         placeholder={undefined}
-      >
-         {tableTitle && (
-            <Typography placeholder={undefined} variant="h5">
-               {tableTitle}
-            </Typography>
-         )}
-
+      <div className="w-full h-full overflow-auto max-h-[250px]">
          <Table>
             <TableHead data={TABLE_HEAD}>
                {({ item, index }) => {
@@ -53,15 +63,17 @@ const MatchesTable = ({ data, onClick, tableTitle }: Props) => {
                   );
                }}
             </TableHead>
-            <TableBody data={Object.keys(data)}>
-               {({ item: matchId, index }) => {
-                  const { gameMode, win, createdAt } = data[matchId] as Match;
-                  const isLast = index === Object.keys(data)?.length - 1;
+            <TableBody data={Object.keys(matches)}>
+               {(matchId, index) => {
+                  const { gameMode, win, map } = matches[
+                     matchId as string
+                  ] as Match;
+                  const isLast = index === Object.keys(matches)?.length - 1;
                   const classes = isLast
                      ? "p-3"
                      : "p-3 border-b border-blue-gray-50 max-w-[200px]";
                   return (
-                     <TableRow key={index}>
+                     <TableRow key={matchId || index}>
                         <TableCell className={classes}>
                            <Typography
                               variant="small"
@@ -79,6 +91,16 @@ const MatchesTable = ({ data, onClick, tableTitle }: Props) => {
                               className="font-normal"
                               placeholder={undefined}
                            >
+                              {map}
+                           </Typography>
+                        </TableCell>
+                        <TableCell className={classes}>
+                           <Typography
+                              variant="small"
+                              color="blue-gray"
+                              className="font-normal"
+                              placeholder={undefined}
+                           >
                               {win ? "Yes" : "No"}
                            </Typography>
                         </TableCell>
@@ -87,7 +109,7 @@ const MatchesTable = ({ data, onClick, tableTitle }: Props) => {
                               <IconButton
                                  placeholder={undefined}
                                  onClick={() => {
-                                    onClick && onClick("edit", matchId);
+                                    handleEditMatch(matchId as string);
                                  }}
                                  className="bg-transparent shadow-none"
                                  variant="text"
@@ -101,7 +123,8 @@ const MatchesTable = ({ data, onClick, tableTitle }: Props) => {
                               <IconButton
                                  placeholder={undefined}
                                  onClick={() => {
-                                    onClick && onClick("delete", matchId);
+                                    // onClick && onClick("delete", matchId);
+                                    handleDeleteMatch(matchId as string);
                                  }}
                                  className="bg-transparent shadow-none"
                                  variant="text"
@@ -119,7 +142,7 @@ const MatchesTable = ({ data, onClick, tableTitle }: Props) => {
                }}
             </TableBody>
          </Table>
-      </Card>
+      </div>
    );
 };
 
