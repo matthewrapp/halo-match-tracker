@@ -15,13 +15,7 @@ import {
 } from "@material-tailwind/react";
 import React, { useContext, useEffect, useState } from "react";
 import { SessionsContext } from "./SessionsContextProvider";
-import Table, {
-   TableBody,
-   TableCell,
-   TableHead,
-   TableHeadCell,
-   TableRow,
-} from "@/lib/common/components/Table";
+import Table, { TableBody, TableCell, TableHead, TableHeadCell, TableRow } from "@/lib/common/components/Table";
 import { revalidate } from "@/lib/server-actions/revalidate";
 import { useRouter } from "next/navigation";
 import { deleteSession } from "@/lib/server-actions/firebase";
@@ -53,9 +47,7 @@ const SessionsTable = ({}: Props) => {
             players: Object.keys(session?.players),
             matchesPlayed: session?.matches?.length,
             wlRatio: `${wins} / ${losses}`,
-            createdAt: new Date(session?.createdAt)?.toLocaleDateString(
-               "en-US"
-            ),
+            createdAt: new Date(session?.createdAt)?.toLocaleDateString("en-US"),
          };
       });
 
@@ -75,15 +67,12 @@ const SessionsTable = ({}: Props) => {
    };
 
    return (
-      <div className="w-full h-full overflow-auto">
+      <div className="w-full h-full max-h-[400px] overflow-auto">
          <Table>
             <TableHead data={TABLE_HEAD}>
                {({ item, index }) => {
                   return (
-                     <TableHeadCell
-                        key={index}
-                        className={` border-b border-blue-gray-100 bg-blue-gray-50 p-3 `}
-                     >
+                     <TableHeadCell key={index} className={` border-b border-blue-gray-100 bg-blue-gray-50 p-3 `}>
                         <Typography
                            variant="small"
                            color="blue-gray"
@@ -100,26 +89,20 @@ const SessionsTable = ({}: Props) => {
                {(session, index) => {
                   const { players, gameType, wlRatio, id } = session;
                   const isLast = index === data?.length - 1;
-                  const classes = isLast
-                     ? "p-3"
-                     : "p-3 border-b border-blue-gray-50 max-w-[200px]";
+                  const classes = isLast ? "p-3" : "p-3 border-b border-blue-gray-50 max-w-[200px]";
 
                   return (
                      <TableRow key={index}>
                         <TableCell className={classes}>
                            <div className="flex flex-row gap-2 w-full overflow-auto">
                               {players
-                                 ?.sort((a: string, b: string) =>
-                                    a > b ? 1 : b > a ? -1 : 0
-                                 )
+                                 ?.sort((a: string, b: string) => (a > b ? 1 : b > a ? -1 : 0))
                                  ?.map((player: Player) => {
                                     const pcn = playerComponentClassNames;
 
                                     let classNames = ``;
-                                    if (pcn[player])
-                                       classNames += pcn[player]["pill"];
-                                    else if (pcn["other"])
-                                       classNames += pcn["other"]["pill"];
+                                    if (pcn[player]) classNames += pcn[player]["pill"];
+                                    else if (pcn["other"]) classNames += pcn["other"]["pill"];
 
                                     return (
                                        <Tooltip content={player} key={player}>
@@ -164,11 +147,7 @@ const SessionsTable = ({}: Props) => {
                               className="bg-transparent shadow-none"
                               variant="text"
                            >
-                              <PencilSquareIcon
-                                 width={24}
-                                 height={24}
-                                 color="currentColor"
-                              />
+                              <PencilSquareIcon width={24} height={24} color="currentColor" />
                            </IconButton>
                            <IconButton
                               placeholder={undefined}
@@ -188,25 +167,14 @@ const SessionsTable = ({}: Props) => {
             </TableBody>
          </Table>
 
-         <Dialog
-            open={confirmModalOpen}
-            handler={setConfirmModalOpen}
-            placeholder={undefined}
-         >
+         <Dialog open={confirmModalOpen} handler={setConfirmModalOpen} placeholder={undefined}>
             <DialogHeader placeholder={undefined}>Delete Session</DialogHeader>
             <DialogBody placeholder={undefined} className="px-8">
-               <Typography
-                  variant="paragraph"
-                  className="font-medium"
-                  placeholder={undefined}
-               >
+               <Typography variant="paragraph" className="font-medium" placeholder={undefined}>
                   Are you sure you want to delete session?
                </Typography>
             </DialogBody>
-            <DialogFooter
-               className="flex flex-row gap-2 items-center "
-               placeholder={undefined}
-            >
+            <DialogFooter className="flex flex-row gap-2 items-center " placeholder={undefined}>
                <Button
                   color="red"
                   placeholder={undefined}
