@@ -1,10 +1,6 @@
-import {
-   getGameModes,
-   getMaps,
-   getSessionById,
-} from "@/lib/server-actions/firebase";
+import { getGameModes, getMaps, getPlayers, getSessionById } from "@/lib/server-actions/firebase";
 import React from "react";
-import { GameMap, GameMode } from "@/lib/types";
+import { GameMap, GameMode, Player } from "@/lib/types";
 import PageContainer from "@/lib/common/container/PageContainer";
 import Actions from "./(partials)/Actions";
 import MatchContextProvider from "./(partials)/MatchContextProvider";
@@ -17,18 +13,22 @@ import Players from "./(partials)/Players";
 import { notFound } from "next/navigation";
 
 interface Props {
-   params: { id: string };
-   searchParams: any;
+   params: Promise<{ id: string }>;
+   searchParams: Promise<any>;
 }
 
-const Page = async ({ params }: Props) => {
+const Page = async (props: Props) => {
+   const params = await props.params;
    const sessionData = await getSessionById(params?.id);
    if (sessionData?.status === 404) return notFound();
-   const gameModes = (await getGameModes()) as Array<GameMode>;
-   const maps = (await getMaps()) as Array<GameMap>;
+   const [gameModes, maps, playersConfig] = await Promise.all([getGameModes(), getMaps(), getPlayers()]);
 
    return (
-      <SessionContextProvider session={sessionData}>
+      <SessionContextProvider
+         session={sessionData}
+         playersConfig={playersConfig}
+         sessionPlayers={Object.keys(sessionData?.players).sort() as Array<Player>}
+      >
          <PageContainer className="max-h-[100dvh]">
             <MatchContextProvider>
                <div className="flex flex-col w-full gap-4 bg-gray-50 p-4 rounded-lg">

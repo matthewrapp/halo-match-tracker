@@ -12,6 +12,9 @@ export type GameType =
    | "Ranked Doubles"
    | "Ranked Tactical"
    | "Ranked Snipers"
+   | "Ranked Slayer"
+   | "League Play"
+   | "Tournament Play"
    | "Other";
 
 export type GameMap =
@@ -33,11 +36,16 @@ export type Player =
    | "YungJaguar"
    | "mcddp15"
    | "Cnasty703"
-   | "Steelblade01";
+   | "Steelblade01"
+   | "AG3NTUNO"
+   | "II RCKLSS"
+   | "Weld4me";
 
 export type PlayerConfig = {
    color: PlayerColor;
 };
+
+export type PlayersConfig = Record<Player, PlayerConfig>;
 
 export type Match = {
    // id: string;
@@ -72,12 +80,4 @@ export type SocketEventResponse = {
    };
 };
 
-export type PlayerColor =
-   | "blue"
-   | "green"
-   | "orange"
-   | "red"
-   | "pink"
-   | "cyan"
-   | "purple"
-   | "gray";
+export type PlayerColor = "blue" | "green" | "orange" | "red" | "pink" | "cyan" | "purple" | "gray";

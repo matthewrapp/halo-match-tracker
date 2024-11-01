@@ -2,13 +2,7 @@
 
 import { v4 as uuidv4 } from "uuid";
 import { GameMap, GameMode } from "@/lib/types";
-import {
-   Button,
-   Dialog,
-   Option,
-   Select,
-   Typography,
-} from "@material-tailwind/react";
+import { Button, Dialog, Option, Select, Typography } from "@material-tailwind/react";
 import React, { useContext, useEffect, useState } from "react";
 import { getLocalIsoToday, MatchContext } from "./MatchContextProvider";
 
@@ -20,18 +14,11 @@ interface Props {
 }
 
 const ReportMatch = ({ gameModes, maps }: Props) => {
-   const {
-      matchConfig,
-      setMatchConfig,
-      matchModalOpen,
-      setMatchModalOpen,
-      handleSaveMatch,
-   } = useContext(MatchContext);
+   const { matchConfig, setMatchConfig, matchModalOpen, setMatchModalOpen, handleSaveMatch } =
+      useContext(MatchContext);
    const [initData, setInitData] = useState<boolean>(false);
 
-   const [selectedGameMode, setSelectedGameMode] = useState<
-      GameMode | undefined
-   >();
+   const [selectedGameMode, setSelectedGameMode] = useState<GameMode | undefined>();
    const [selectedMap, setSelectedMap] = useState<GameMap | undefined>();
    const [didWin, setDidWin] = useState<boolean | undefined>();
    const [matchId, setMatchId] = useState<string>();
@@ -59,8 +46,7 @@ const ReportMatch = ({ gameModes, maps }: Props) => {
    };
 
    const handleReportMatch = async (e: any) => {
-      if (!selectedGameMode || typeof didWin !== "boolean" || !selectedMap)
-         return;
+      if (!selectedGameMode || typeof didWin !== "boolean" || !selectedMap) return;
       const newMatchId = uuidv4();
 
       await handleSaveMatch(
@@ -68,10 +54,7 @@ const ReportMatch = ({ gameModes, maps }: Props) => {
             gameMode: selectedGameMode,
             map: selectedMap,
             win: didWin,
-            createdAt:
-               matchId && matchConfig
-                  ? matchConfig[matchId]?.createdAt
-                  : getLocalIsoToday(new Date()),
+            createdAt: matchId && matchConfig ? matchConfig[matchId]?.createdAt : getLocalIsoToday(new Date()),
          },
          matchId || newMatchId
       )
@@ -83,9 +66,7 @@ const ReportMatch = ({ gameModes, maps }: Props) => {
          });
    };
 
-   const onMobile =
-      typeof document !== "undefined" &&
-      "ontouchstart" in document?.documentElement;
+   const onMobile = typeof document !== "undefined" && "ontouchstart" in document?.documentElement;
 
    return (
       <Dialog
@@ -103,12 +84,22 @@ const ReportMatch = ({ gameModes, maps }: Props) => {
          }}
       >
          <div className="p-4 flex flex-col gap-3">
-            <Typography variant="h5" placeholder={undefined}>
+            <Typography
+               variant="h5"
+               placeholder={undefined}
+               onPointerEnterCapture={undefined}
+               onPointerLeaveCapture={undefined}
+            >
                Report Match Details
             </Typography>
             <hr className="my-2" />
             <div className="flex flex-col gap-1">
-               <Typography variant="h6" placeholder={undefined}>
+               <Typography
+                  variant="h6"
+                  placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
+               >
                   Game Mode?
                </Typography>
                <Select
@@ -118,6 +109,8 @@ const ReportMatch = ({ gameModes, maps }: Props) => {
                   onChange={(value: any) => {
                      setSelectedGameMode(value);
                   }}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
                >
                   {gameModes?.map((gm: GameMode) => {
                      return (
@@ -129,7 +122,12 @@ const ReportMatch = ({ gameModes, maps }: Props) => {
                </Select>
             </div>
             <div className="flex flex-col gap-1">
-               <Typography variant="h6" placeholder={undefined}>
+               <Typography
+                  variant="h6"
+                  placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
+               >
                   Map?
                </Typography>
                <Select
@@ -139,6 +137,8 @@ const ReportMatch = ({ gameModes, maps }: Props) => {
                   onChange={(value: any) => {
                      setSelectedMap(value);
                   }}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
                >
                   {maps?.map((map: GameMap) => {
                      return (
@@ -150,24 +150,25 @@ const ReportMatch = ({ gameModes, maps }: Props) => {
                </Select>
             </div>
             <div className="flex flex-col gap-1">
-               <Typography variant="h6" placeholder={undefined}>
+               <Typography
+                  variant="h6"
+                  placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
+               >
                   Did You Win?
                </Typography>
                <Select
                   placeholder={undefined}
                   label="Did you win the match?"
-                  value={
-                     typeof didWin === "boolean"
-                        ? didWin
-                           ? "Yes"
-                           : "No"
-                        : undefined
-                  }
+                  value={typeof didWin === "boolean" ? (didWin ? "Yes" : "No") : undefined}
                   onChange={(value: any) => {
                      let tempWin = false;
                      if (value === "Yes") tempWin = true;
                      setDidWin(tempWin);
                   }}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
                >
                   {didWinArr?.map((option: "Yes" | "No") => {
                      return (
@@ -188,6 +189,8 @@ const ReportMatch = ({ gameModes, maps }: Props) => {
                   !onMobile && handleReportMatch(e);
                }}
                placeholder={undefined}
+               onPointerEnterCapture={undefined}
+               onPointerLeaveCapture={undefined}
             >
                Save Match
             </Button>

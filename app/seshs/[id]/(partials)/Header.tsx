@@ -29,6 +29,8 @@ const Header = ({}: Props) => {
             size="sm"
             color="blue-gray"
             className="gap-1 flex-wrap"
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
          >
             {buttonsArr?.map((b) => {
                return (
@@ -39,6 +41,8 @@ const Header = ({}: Props) => {
                      }}
                      placeholder={undefined}
                      className="hover:shadow-md border-none rounded-md"
+                     onPointerEnterCapture={undefined}
+                     onPointerLeaveCapture={undefined}
                   >
                      {b.title}
                   </Button>

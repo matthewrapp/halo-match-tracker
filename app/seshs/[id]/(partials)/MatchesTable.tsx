@@ -1,12 +1,6 @@
 "use client";
 
-import Table, {
-   TableBody,
-   TableCell,
-   TableHead,
-   TableHeadCell,
-   TableRow,
-} from "@/lib/common/components/Table";
+import Table, { TableBody, TableCell, TableHead, TableHeadCell, TableRow } from "@/lib/common/components/Table";
 import { Match } from "@/lib/types";
 import { PencilSquareIcon, TrashIcon } from "@heroicons/react/24/solid";
 import { IconButton, Typography } from "@material-tailwind/react";
@@ -19,22 +13,15 @@ const TABLE_HEAD = ["Game Mode", "Map", "Won", ""];
 interface Props {}
 
 const MatchesTable = ({}: Props) => {
-   const {
-      matchMap,
-      setMatchConfig,
-      setMatchModalOpen,
-      handleDeleteMatch,
-      matchMapKey,
-   } = useContext(MatchContext);
+   const { matchMap, setMatchConfig, setMatchModalOpen, handleDeleteMatch, matchMapKey } =
+      useContext(MatchContext);
    const matches = matchMap[matchMapKey];
 
    // keeping this within the MatchesTable component because it's not being used anywhere else
    const handleEditMatch = async (matchId: string) => {
       const copy = deepCopy(matches);
       const matchIds = Object.keys(copy);
-      const foundMatchId: string | undefined = matchIds?.find(
-         (mId: string) => mId === matchId
-      );
+      const foundMatchId: string | undefined = matchIds?.find((mId: string) => mId === matchId);
       setMatchConfig({
          [foundMatchId as string]: copy[foundMatchId as string],
       });
@@ -47,15 +34,14 @@ const MatchesTable = ({}: Props) => {
             <TableHead data={TABLE_HEAD}>
                {({ item, index }) => {
                   return (
-                     <TableHeadCell
-                        key={index}
-                        className={`border-b border-blue-gray-100 bg-blue-gray-50 p-3`}
-                     >
+                     <TableHeadCell key={index} className={`border-b border-blue-gray-100 bg-blue-gray-50 p-3`}>
                         <Typography
                            variant="small"
                            color="blue-gray"
                            className="font-medium leading-none opacity-70"
                            placeholder={undefined}
+                           onPointerEnterCapture={undefined}
+                           onPointerLeaveCapture={undefined}
                         >
                            {item}
                         </Typography>
@@ -65,13 +51,9 @@ const MatchesTable = ({}: Props) => {
             </TableHead>
             <TableBody data={Object.keys(matches)}>
                {(matchId, index) => {
-                  const { gameMode, win, map } = matches[
-                     matchId as string
-                  ] as Match;
+                  const { gameMode, win, map } = matches[matchId as string] as Match;
                   const isLast = index === Object.keys(matches)?.length - 1;
-                  const classes = isLast
-                     ? "p-3"
-                     : "p-3 border-b border-blue-gray-50 max-w-[200px]";
+                  const classes = isLast ? "p-3" : "p-3 border-b border-blue-gray-50 max-w-[200px]";
                   return (
                      <TableRow key={matchId || index}>
                         <TableCell className={classes}>
@@ -80,6 +62,8 @@ const MatchesTable = ({}: Props) => {
                               color="blue-gray"
                               className="font-normal"
                               placeholder={undefined}
+                              onPointerEnterCapture={undefined}
+                              onPointerLeaveCapture={undefined}
                            >
                               {gameMode}
                            </Typography>
@@ -90,6 +74,8 @@ const MatchesTable = ({}: Props) => {
                               color="blue-gray"
                               className="font-normal"
                               placeholder={undefined}
+                              onPointerEnterCapture={undefined}
+                              onPointerLeaveCapture={undefined}
                            >
                               {map}
                            </Typography>
@@ -100,6 +86,8 @@ const MatchesTable = ({}: Props) => {
                               color="blue-gray"
                               className="font-normal"
                               placeholder={undefined}
+                              onPointerEnterCapture={undefined}
+                              onPointerLeaveCapture={undefined}
                            >
                               {win ? "Yes" : "No"}
                            </Typography>
@@ -113,12 +101,10 @@ const MatchesTable = ({}: Props) => {
                                  }}
                                  className="bg-transparent shadow-none"
                                  variant="text"
+                                 onPointerEnterCapture={undefined}
+                                 onPointerLeaveCapture={undefined}
                               >
-                                 <PencilSquareIcon
-                                    width={24}
-                                    height={24}
-                                    color="currentColor"
-                                 />
+                                 <PencilSquareIcon width={24} height={24} color="currentColor" />
                               </IconButton>
                               <IconButton
                                  placeholder={undefined}
@@ -128,12 +114,10 @@ const MatchesTable = ({}: Props) => {
                                  }}
                                  className="bg-transparent shadow-none"
                                  variant="text"
+                                 onPointerEnterCapture={undefined}
+                                 onPointerLeaveCapture={undefined}
                               >
-                                 <TrashIcon
-                                    width={24}
-                                    height={24}
-                                    color="red"
-                                 />
+                                 <TrashIcon width={24} height={24} color="red" />
                               </IconButton>
                            </div>
                         </TableCell>

@@ -2,31 +2,18 @@
 
 import { GameType, Player, PlayerConfig, Session } from "@/lib/types";
 import { deepCopy } from "@/utilities/helpers";
-import {
-   Button,
-   Checkbox,
-   Dialog,
-   Option,
-   Select,
-   Typography,
-} from "@material-tailwind/react";
+import { Button, Checkbox, Dialog, Option, Select, Typography } from "@material-tailwind/react";
 import React, { useContext, useState } from "react";
 import { SessionsContext } from "./SessionsContextProvider";
 import { getLocalIsoToday } from "../[id]/(partials)/MatchContextProvider";
 
-interface Props {
-   gameTypes: Array<GameType>;
-   players: Array<Record<Player, PlayerConfig>>;
-}
-
-const CreateNewSession = ({ gameTypes, players }: Props) => {
-   const { setSessionModalOpen, sessionModalOpen, handleCreateNewSession } =
+type Props = {};
+const CreateNewSession = ({}: Props) => {
+   const { setSessionModalOpen, sessionModalOpen, handleCreateNewSession, players, playersConfig, gameTypes } =
       useContext(SessionsContext);
 
-   const [selectedPlayers, setSelectedPlayers] =
-      useState<{ [player in Player]: boolean }>();
-   const [selectedGameType, setSelectedGameType] =
-      useState<GameType>("Ranked Arena");
+   const [selectedPlayers, setSelectedPlayers] = useState<{ [player in Player]: boolean }>();
+   const [selectedGameType, setSelectedGameType] = useState<GameType>("Ranked Arena");
 
    return (
       <Dialog
@@ -38,21 +25,28 @@ const CreateNewSession = ({ gameTypes, players }: Props) => {
          }}
          open={sessionModalOpen}
          placeholder={undefined}
-         // handler={function (value: any): void {
-         //    console.log("handler");
-         // }}
       >
          <div className="p-4 flex flex-col gap-2">
-            <Typography variant="h5" placeholder={undefined}>
+            <Typography
+               variant="h5"
+               placeholder={undefined}
+               onPointerEnterCapture={undefined}
+               onPointerLeaveCapture={undefined}
+            >
                Configure The Session
             </Typography>
             <hr className="my-2" />
-            <Typography variant="h6" placeholder={undefined}>
+            <Typography
+               variant="h6"
+               placeholder={undefined}
+               onPointerEnterCapture={undefined}
+               onPointerLeaveCapture={undefined}
+            >
                Who's playing?
             </Typography>
             <div className="flex flex-row flex-wrap">
                {players?.map((player, i) => {
-                  const name = Object.keys(player)[0] as Player;
+                  const name = player as Player;
                   return (
                      <Checkbox
                         key={i}
@@ -61,9 +55,7 @@ const CreateNewSession = ({ gameTypes, players }: Props) => {
                         crossOrigin={undefined}
                         onClick={() => {
                            let val = true;
-                           const exists =
-                              selectedPlayers &&
-                              typeof selectedPlayers[name] === "boolean";
+                           const exists = selectedPlayers && typeof selectedPlayers[name] === "boolean";
                            if (exists) val = !selectedPlayers[name];
 
                            setSelectedPlayers((prevState: any) => ({
@@ -71,14 +63,26 @@ const CreateNewSession = ({ gameTypes, players }: Props) => {
                               [name]: val,
                            }));
                         }}
+                        onPointerEnterCapture={undefined}
+                        onPointerLeaveCapture={undefined}
                      />
                   );
                })}
             </div>
-            <Typography variant="h6" placeholder={undefined}>
+            <Typography
+               variant="h6"
+               placeholder={undefined}
+               onPointerEnterCapture={undefined}
+               onPointerLeaveCapture={undefined}
+            >
                What game type?
             </Typography>
-            <Select label="Select Game Type" placeholder={undefined}>
+            <Select
+               label="Select Game Type"
+               placeholder={undefined}
+               onPointerEnterCapture={undefined}
+               onPointerLeaveCapture={undefined}
+            >
                {gameTypes?.map((gt: GameType) => {
                   return (
                      <Option
@@ -109,6 +113,8 @@ const CreateNewSession = ({ gameTypes, players }: Props) => {
                      createdAt: getLocalIsoToday(new Date()),
                   });
                }}
+               onPointerEnterCapture={undefined}
+               onPointerLeaveCapture={undefined}
                placeholder={undefined}
             >
                Let's Get Some Dubs

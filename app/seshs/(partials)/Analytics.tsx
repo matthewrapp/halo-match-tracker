@@ -8,23 +8,13 @@ type Props = {
    matchMapKey: "todaysMatches" | "previousMatches" | "allMatches";
 };
 const Analytics = ({ matchMapKey }: Props) => {
-   const {
-      matchesMap,
-      matchesPlayedMap,
-      getWinLossCount,
-      getWinPercentage,
-      getMostCommonMapAndMode,
-   } = useContext(SessionsContext);
+   const { matchesMap, matchesPlayedMap, getWinLossCount, getWinPercentage, getMostCommonMapAndMode } =
+      useContext(SessionsContext);
    const matches = matchesMap[matchMapKey];
    const { wins, losses } = getWinLossCount(matches);
    const gamesPlayed = matchesPlayedMap[matchMapKey];
    const winPer = getWinPercentage(wins, gamesPlayed);
-   const {
-      mostCommonMap,
-      mostCommonMapCount,
-      mostCommonGameMode,
-      mostCommonGameModeCount,
-   } = getMostCommonMapAndMode(matches);
+   const { mostCommonMap, mostCommonGameMode } = getMostCommonMapAndMode(matches);
 
    // const mcMapStr = mostCommonMap?.join(", ");
    // const mcModeStr = mostCommonGameMode?.join(", ");

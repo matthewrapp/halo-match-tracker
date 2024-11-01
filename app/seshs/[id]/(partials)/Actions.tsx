@@ -2,10 +2,7 @@
 
 import FloatingBtnContainer from "@/lib/common/floating-btn-container/FloatingBtnContainer";
 import { revalidate } from "@/lib/server-actions/revalidate";
-import {
-   ArrowLeftEndOnRectangleIcon,
-   PlusIcon,
-} from "@heroicons/react/24/solid";
+import { ArrowLeftEndOnRectangleIcon, PlusIcon } from "@heroicons/react/24/solid";
 import { IconButton } from "@material-tailwind/react";
 import { useRouter } from "next/navigation";
 import React, { useContext } from "react";
@@ -26,6 +23,8 @@ const Actions = ({}: Props) => {
                onClick={() => {
                   setMatchModalOpen(true);
                }}
+               onPointerEnterCapture={undefined}
+               onPointerLeaveCapture={undefined}
             >
                <PlusIcon width={24} height={24} color="currentColor" />
             </IconButton>
@@ -39,12 +38,10 @@ const Actions = ({}: Props) => {
                   await revalidate({ path });
                   router.push(path);
                }}
+               onPointerEnterCapture={undefined}
+               onPointerLeaveCapture={undefined}
             >
-               <ArrowLeftEndOnRectangleIcon
-                  width={24}
-                  height={24}
-                  color="currentColor"
-               />
+               <ArrowLeftEndOnRectangleIcon width={24} height={24} color="currentColor" />
             </IconButton>
          </FloatingBtnContainer>
       </>

@@ -13,7 +13,7 @@ import {
    updateDoc,
    deleteDoc,
 } from "firebase/firestore";
-import { GameMap, GameMode, GameType, Match, Player, Session } from "../types";
+import { GameMap, GameMode, GameType, Match, Player, PlayerConfig, Session } from "../types";
 
 export async function getGameTypes() {
    const dbRes = await getDocs(query(collection(db, "gameTypes")));
@@ -35,16 +35,18 @@ export async function getMaps() {
 
 export async function getPlayers() {
    const dbRes = await getDocs(query(collection(db, "players")));
-   const players = dbRes.docs.map((doc) => ({
-      [doc.id]: { ...doc.data() },
-   })) as Array<Record<Player, any>>;
-   return deepCopy(players);
+   // const players = dbRes.docs.map((doc) => ({
+   //    [doc.id]: { ...doc.data() },
+   // })) as Array<Record<Player, any>>;
+   const players = {} as Record<Player, PlayerConfig>;
+   dbRes.docs.forEach((doc) => {
+      players[doc.id as Player] = { ...(doc?.data() as PlayerConfig) };
+   });
+   return players;
 }
 
 export async function getSessions(version?: 1) {
-   const dbRes = await getDocs(
-      query(collection(db, "sessions"), orderBy("createdAt", "desc"))
-   );
+   const dbRes = await getDocs(query(collection(db, "sessions"), orderBy("createdAt", "desc")));
    if (version && version === 1) {
       const sessions = dbRes.docs.map((document) => {
          const data = document.data();
@@ -132,10 +134,7 @@ function sortMatches(matches: Array<Match>) {
    }));
 
    // Sort the array by createdAt in descending order
-   matchesArray.sort(
-      (a, b) =>
-         new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-   );
+   matchesArray.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 
    // Convert the array back to an object
    const sortedMatches: Array<Match> = matchesArray.reduce((acc, match) => {
@@ -188,9 +187,7 @@ export async function backupSesssions() {
          ...(s?.data() as Session),
          id: s.id,
       }));
-      const seshsToBU = allSeshs.filter(
-         (s) => !buSeshs.some((bu) => bu.id === s.id)
-      );
+      const seshsToBU = allSeshs.filter((s) => !buSeshs.some((bu) => bu.id === s.id));
 
       if (!!seshsToBU?.length) {
          for (const session of seshsToBU) {

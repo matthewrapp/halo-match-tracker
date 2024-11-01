@@ -12,9 +12,7 @@ interface Props {
 }
 
 const AnalyticCards = ({ wins, loses, matchesPlayed, matches }: Props) => {
-   const winPer = !isNaN((wins / matchesPlayed) * 100)
-      ? `${Math.round((wins / matchesPlayed) * 100)}%`
-      : `0%`;
+   const winPer = !isNaN((wins / matchesPlayed) * 100) ? `${Math.round((wins / matchesPlayed) * 100)}%` : `0%`;
    let haloMapCount: any = {};
    let haloGameModeCount: any = {};
    const matchIds: Array<string> = Object.keys(matches);
@@ -25,8 +23,7 @@ const AnalyticCards = ({ wins, loses, matchesPlayed, matches }: Props) => {
       else haloMapCount[match.map] += 1;
 
       if (!match?.gameMode) return;
-      if (!haloGameModeCount[match.gameMode])
-         haloGameModeCount[match.gameMode] = 1;
+      if (!haloGameModeCount[match.gameMode]) haloGameModeCount[match.gameMode] = 1;
       else haloGameModeCount[match.gameMode] += 1;
    });
    let mostCommonMapCount: number = 0;
@@ -34,16 +31,14 @@ const AnalyticCards = ({ wins, loses, matchesPlayed, matches }: Props) => {
    let mostCommonMap: Array<GameMap | undefined> = [];
    let mostCommonGameMode: Array<GameMode | undefined> = [];
    for (const map in haloMapCount) {
-      if (haloMapCount[map] > mostCommonMapCount)
-         mostCommonMapCount = haloMapCount[map];
+      if (haloMapCount[map] > mostCommonMapCount) mostCommonMapCount = haloMapCount[map];
    }
    for (const gameMode in haloGameModeCount) {
       if (haloGameModeCount[gameMode] > mostCommonGameModeCount)
          mostCommonGameModeCount = haloGameModeCount[gameMode];
    }
    for (const map in haloMapCount) {
-      if (haloMapCount[map] === mostCommonMapCount)
-         mostCommonMap.push(map as GameMap);
+      if (haloMapCount[map] === mostCommonMapCount) mostCommonMap.push(map as GameMap);
    }
    for (const gameMode in haloGameModeCount) {
       if (haloGameModeCount[gameMode] === mostCommonGameModeCount) {
@@ -67,9 +62,7 @@ const AnalyticCards = ({ wins, loses, matchesPlayed, matches }: Props) => {
       {
          title: "Most Played Game Mode",
          value: mostCommonGameMode?.join(", ") || "N/A",
-         toolTipVal: `${mostCommonGameMode?.join(
-            ", "
-         )} - ${mostCommonGameModeCount}`,
+         toolTipVal: `${mostCommonGameMode?.join(", ")} - ${mostCommonGameModeCount}`,
       },
    ];
 
@@ -81,13 +74,22 @@ const AnalyticCards = ({ wins, loses, matchesPlayed, matches }: Props) => {
                   className="w-[calc(50%-8px)] sm:max-w-[200px]"
                   placeholder={undefined}
                   key={i}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
                >
-                  <CardBody className="text-center p-2" placeholder={undefined}>
+                  <CardBody
+                     className="text-center p-2"
+                     placeholder={undefined}
+                     onPointerEnterCapture={undefined}
+                     onPointerLeaveCapture={undefined}
+                  >
                      <Typography
                         variant="h6"
                         color="blue-gray"
                         className="mb-1 font-normal text-[14px]"
                         placeholder={undefined}
+                        onPointerEnterCapture={undefined}
+                        onPointerLeaveCapture={undefined}
                      >
                         {card?.title}
                      </Typography>
@@ -97,6 +99,8 @@ const AnalyticCards = ({ wins, loses, matchesPlayed, matches }: Props) => {
                            color="blue-gray"
                            className="truncate text-[20px]"
                            placeholder={undefined}
+                           onPointerEnterCapture={undefined}
+                           onPointerLeaveCapture={undefined}
                         >
                            {card?.value}
                         </Typography>

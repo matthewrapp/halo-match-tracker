@@ -1,19 +1,25 @@
 "use client";
 
-import { GameType, Player, Session } from "@/lib/types";
+import { GameType, Player, PlayersConfig, Session } from "@/lib/types";
 import React, { createContext, useState } from "react";
 
 type SessionContextType = {
    sessionData: Session;
    setSessionData: React.Dispatch<React.SetStateAction<Session>>;
    sessionId: string;
-   players: Array<Player>;
+   sessionPlayers: Array<Player>;
+   playersConfig: PlayersConfig;
    gameType: GameType;
 };
 export const SessionContext = createContext({} as SessionContextType);
 
-type Props = { children: React.ReactNode; session: Session };
-const SessionContextProvider = ({ children, session }: Props) => {
+type Props = {
+   children: React.ReactNode;
+   session: Session;
+   playersConfig: PlayersConfig;
+   sessionPlayers: Array<Player>;
+};
+const SessionContextProvider = ({ children, session, playersConfig, sessionPlayers }: Props) => {
    const [sessionData, setSessionData] = useState<Session>(session);
 
    return (
@@ -22,7 +28,8 @@ const SessionContextProvider = ({ children, session }: Props) => {
             sessionData,
             setSessionData,
             sessionId: sessionData?.id as string,
-            players: Object.keys(sessionData?.players) as Array<Player>,
+            sessionPlayers: sessionPlayers,
+            playersConfig: playersConfig,
             gameType: sessionData?.gameType,
          }}
       >
