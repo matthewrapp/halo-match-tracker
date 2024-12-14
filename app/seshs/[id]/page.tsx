@@ -12,6 +12,8 @@ import ReportMatch from "./(partials)/ReportMatch";
 import Players from "./(partials)/Players";
 import { notFound } from "next/navigation";
 
+export const dynamic = "force-dynamic";
+
 interface Props {
    params: Promise<{ id: string }>;
    searchParams: Promise<any>;

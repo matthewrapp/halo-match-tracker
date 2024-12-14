@@ -9,6 +9,8 @@ import Analytics from "./(partials)/Analytics";
 import Title from "@/lib/common/components/Title";
 import ViewAnalytics from "./(partials)/ViewAnalytics";
 
+export const dynamic = "force-dynamic";
+
 interface Props {}
 const Page = async ({}: Props) => {
    const [sessions, gameTypes, playersConfig] = await Promise.all([getSessions(1), getGameTypes(), getPlayers()]);
